@@ -17,7 +17,7 @@ export default function Home() {
             priority
           />
           <Image
-            className="relative mr-8 flex lg:hidden"
+            className="relative mr-4 flex lg:hidden"
             src={logo}
             alt="Solide Finance Logo"
             width={32}
