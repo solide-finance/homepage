@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-[100vh]">
       <div className="flex min-w-[100vw] items-center justify-center flex-col">
-        <h1 className="flex flex-row items-center font-light text-4xl lg:text-8xl mt-64">
+        <h1 className="flex flex-row items-center font-light text-4xl lg:text-8xl">
           {" "}
           <Image
             className="relative mr-8 hidden lg:flex"
@@ -40,7 +40,7 @@ export default function Home() {
           </a>
         </p>
 
-        <p className="flex text-sm lg:text-lg text-slate-500 mt-32 p-4">
+        <p className="flex text-sm lg:text-lg text-slate-500 mt-64 p-4">
           Solide Finance SAS 2023. All rights reserved.
           <a
             className="group ml-4"
