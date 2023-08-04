@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-[100vh]">
       <div className="flex min-w-[100vw] items-center justify-center flex-col">
-        <h1 className="flex flex-row items-center font-light text-4xl lg:text-8xl">
+        <h1 className="flex flex-row items-center font-light text-4xl lg:text-8xl mt-16">
           {" "}
           <Image
             className="relative mr-8 hidden lg:flex"
@@ -27,11 +27,11 @@ export default function Home() {
           SolideFinance
         </h1>
 
-        <span className="text-slate-500 text-md lg:text-2xl mt-4">
+        <span className="text-slate-500 text-md lg:text-2xl">
           The Next Generation Banking Experience.
         </span>
 
-        <p className="flex mt-32 cursor-pointer">
+        <p className="flex mt-16 cursor-pointer">
           <a
             href="mailto:hello@solide.fi"
             className="text-white bg-slate-900 text-lg rounded-full p-4 hover:text-slate-900 border hover:border-slate-900 hover:bg-transparent"
@@ -40,7 +40,7 @@ export default function Home() {
           </a>
         </p>
 
-        <p className="flex text-sm lg:text-lg text-slate-500 mt-64 p-4">
+        <p className="flex text-sm lg:text-lg text-slate-500 mt-32 p-4">
           Solide Finance SAS 2023. All rights reserved.
           <a
             className="group ml-4"
