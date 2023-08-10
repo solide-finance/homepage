@@ -33,8 +33,14 @@ export default function Home() {
 
         <p className="flex mt-16 cursor-pointer">
           <a
+            href="https://app.solide.fi"
+            className="text-white bg-slate-900 text-lg rounded-full p-4 border hover:scale-110 hover:shadow-xl hover:shadow-slate-900/10 transition-all"
+          >
+            Start Banking -&gt;
+          </a>
+          <a
             href="mailto:hello@solide.fi"
-            className="text-white bg-slate-900 text-lg rounded-full p-4 hover:text-slate-900 border hover:border-slate-900 hover:bg-transparent"
+            className="ml-4 text-black bg-white text-lg rounded-full p-4 border border-slate-900 hover:scale-110 hover:shadow-xl hover:shadow-slate-900/10 transition-all"
           >
             Contact-Us
           </a>
