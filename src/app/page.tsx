@@ -27,8 +27,8 @@ export default function Home() {
           SolideFinance
         </h1>
 
-        <span className="text-slate-500 text-md lg:text-2xl">
-          The Next Generation Banking Experience.
+        <span className="text-slate-500 text-md lg:text-2xl mt-2">
+          The Next Generation Treasury Management Experience.
         </span>
 
         <p className="flex mt-16 cursor-pointer">
@@ -36,7 +36,7 @@ export default function Home() {
             href="https://app.solide.fi"
             className="text-white bg-slate-900 text-lg rounded-full p-4 border hover:scale-110 hover:shadow-xl hover:shadow-slate-900/10 transition-all"
           >
-            Start Banking -&gt;
+            Discover -&gt;
           </a>
           <a
             href="mailto:hello@solide.fi"
