@@ -33,7 +33,7 @@ export default function Home() {
 
         <p className="flex mt-16 cursor-pointer">
           <a
-            href="https://app.solide.fi"
+            href="https://demo.solide.fi"
             className="text-white bg-slate-900 text-lg rounded-full p-4 border hover:scale-110 hover:shadow-xl hover:shadow-slate-900/10 transition-all"
           >
             Discover -&gt;
