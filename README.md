@@ -16,4 +16,4 @@ npm run dev
 
 ## Copyright
 
-Copyright 2023 Solide Finance SAS. All rights reserved.
+Copyright 2023-2024 Solide Finance SAS. All rights reserved.
