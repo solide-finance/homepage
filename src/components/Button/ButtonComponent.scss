@@ -1,0 +1,43 @@
+@mixin button-base($basePadding: 1rem) {
+  display: flex;
+  align-items: center;
+
+  border: 0;
+  padding: calc($basePadding / 2);
+  padding-left: calc($basePadding * 2);
+  border-radius: calc($basePadding * 4);
+
+  border-radius: 4rem;
+
+  font-family: "Poppins";
+  font-weight: 300;
+
+  span {
+    border-radius: 50%;
+    align-content: center;
+
+    width: calc($basePadding * 3);
+    height: calc($basePadding * 3);
+    padding: $basePadding;
+    margin-left: $basePadding;
+
+    font-family: "Inter";
+    font-weight: 100;
+    color: white;
+    background-color: black;
+    text-align: center;
+  }
+
+  &:not(:has(> span)) {
+    padding-right: calc($basePadding * 2);
+  }
+
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scaleX(1.05) scaleY(1.05);
+    box-shadow: calc($basePadding / 2) calc($basePadding / 2) calc($basePadding / 2) rgba(0, 0, 0, .5);
+  }
+}

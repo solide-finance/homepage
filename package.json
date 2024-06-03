@@ -1,25 +1,35 @@
 {
   "name": "homepage",
-  "version": "0.1.0",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "20.4.6",
-    "@types/react": "18.2.18",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
-    "postcss": "8.4.27",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "@fontsource/inter": "^5.0.18",
+    "@fontsource/poppins": "^5.0.14",
+    "classnames": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.77.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
