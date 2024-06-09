@@ -1,5 +1,3 @@
-@use "src/components/Button/ButtonComponent.scss";
-
 .hero-component {
   $maxWidth: 50rem;
 
@@ -30,18 +28,5 @@
     width: $maxWidth;
     font-size: 2.4rem;
     font-weight: 100;
-  }
-
-  a.button-like {
-    @include ButtonComponent.button-base();
-
-    display: inline-flex;
-
-    margin-top: 6rem;
-    font-size: 1.6rem;
-
-    background-color: white;
-    text-decoration: none;
-    color: black;
   }
 }

@@ -34,10 +34,10 @@ export default function HeaderComponent() {
           <li>
             <a href="#product">Product</a>
           </li>
-          {/* <li>
+          <li>
             <a href="#vision">Vision</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#about">About</a>
           </li> */}
         </ul>

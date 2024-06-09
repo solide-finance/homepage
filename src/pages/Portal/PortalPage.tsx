@@ -1,3 +1,4 @@
+import CallToActionComponent from "./CallToActionComponent";
 import FeaturesComponent from "./FeaturesComponent";
 import HeroComponent from "./HeroComponent";
 import MissionComponent from "./MissionComponent";
@@ -12,6 +13,7 @@ export default function PortalPage() {
       <ProductComponent nav="product" />
       <VisionComponent nav="vision" />
       <FeaturesComponent nav="features" />
+      <CallToActionComponent />
     </>
   );
 }
