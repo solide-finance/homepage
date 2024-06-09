@@ -1,0 +1,32 @@
+.features-component {
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  dl > div {
+    flex: 1 0 15%;
+    margin: 0 4rem 4rem 4rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  dt {
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1;
+    padding: 4rem;
+    background-color: white;
+    border-radius: 4rem;
+  }
+
+  dd {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

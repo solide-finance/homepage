@@ -1,10 +1,10 @@
 import "./VisionComponent.scss";
 
-interface ProductComponentProps {
+interface VisionComponentProps {
   nav: string;
 }
 
-export default function VisionComponent({ nav }: ProductComponentProps) {
+export default function VisionComponent({ nav }: VisionComponentProps) {
   return (
     <div className="vision-component page alternate" id={nav}>
       <h3>Vision</h3>
