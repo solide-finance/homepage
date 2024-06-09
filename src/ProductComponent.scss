@@ -1,0 +1,23 @@
+.product-component {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    width: 58%;
+
+    summary {
+      font-weight: bold;
+
+      &::marker {
+        text-align: right;
+      }
+    }
+  }
+
+  > img {
+    width: 38%;
+    display: inline-grid;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}

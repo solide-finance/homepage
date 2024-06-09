@@ -4,10 +4,13 @@
 @import "@fontsource/poppins/700.css";
 @import "@fontsource/poppins/900.css";
 
+@import "./utils/variables.scss";
+
 html {
   font-family: "Poppins";
   font-size: 10px;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,11 +26,34 @@ body {
 }
 
 main {
+  padding: 0 4rem;
   margin-top: 4rem;
   margin: 0 auto;
   max-width: 1280px;
 
+  .page {
+    margin: 16rem 0;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    font-weight: 300;
+
+    scroll-margin-top: 20rem;
+  }
+
   .hero-component {
-    min-height: 100vh;
+    // min-height: 100vh;
+  }
+
+  .alternate {
+    background-color: white;
+
+    h2,
+    h3 {
+      color: $purple;
+    }
+
+    p {
+      color: $purple-dark;
+    }
   }
 }

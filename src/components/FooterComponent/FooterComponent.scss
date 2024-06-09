@@ -1,6 +1,8 @@
+@import "../../utils/variables.scss";
+
 footer {
   padding: 4rem;
-  background: linear-gradient(135deg, #13072e, #3f2182);
+  background: $brand-linear-gradient;
 
   .social-link {
     fill: white;

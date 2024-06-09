@@ -38,6 +38,6 @@
 
   &:hover {
     transform: scaleX(1.05) scaleY(1.05);
-    box-shadow: calc($basePadding / 2) calc($basePadding / 2) calc($basePadding / 2) rgba(0, 0, 0, .5);
+    box-shadow: calc($basePadding / 2) calc($basePadding / 2) calc($basePadding / 2) rgba(0, 0, 0, 0.5);
   }
 }

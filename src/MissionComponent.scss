@@ -1,0 +1,23 @@
+@import "./utils/variables.scss";
+
+.mission-component {
+  ul {
+    margin-top: 4rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    width: 20%;
+    margin-right: 8rem;
+    display: inline-grid;
+    place-content: center;
+    aspect-ratio: 1;
+
+    background: $brand-linear-gradient;
+
+    padding: 2rem;
+    text-align: center;
+  }
+}
