@@ -40,6 +40,14 @@ main {
     scroll-margin-top: 20rem;
   }
 
+  h2 {
+    text-transform: capitalize;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
   .hero-component {
     // min-height: 100vh;
   }

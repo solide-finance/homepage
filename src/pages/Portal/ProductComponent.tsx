@@ -1,5 +1,5 @@
-import cashpool from "./assets/cashpool.webp";
-import crossborderpayments from "./assets/crossborderpayments.webp";
+import cashpool from "../../assets/cashpool.webp";
+import crossborderpayments from "../../assets/crossborderpayments.webp";
 
 import "./ProductComponent.scss";
 
@@ -36,7 +36,7 @@ export default function ProductComponent({ nav }: ProductComponentProps) {
         <img src={crossborderpayments} className="illustration" />
         <div>
           <h3>Product</h3>
-          <h2>Cross border payments</h2>
+          <h2>Cross-border payments</h2>
           <p>
             Elevate your clients' financial operations with SolideFinance's advanced cross-border payment service. Our
             solution seamlessly integrates with your existing systems, enabling effortless international transactions.
