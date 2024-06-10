@@ -17,12 +17,10 @@ export default function LegalNoticePage() {
         contact us at data@solide.fi
       </p>
       <p>This website is hosted by Cloudflare</p>
-      name of the host
       <ul>
-        <li>corporate name</li>
-        <li>address</li>
-        <li>SIRET number</li>
-        <li>phone number</li>
+        <li>CLOUDFLARE FRANCE SAS</li>
+        <li>6 PLACE DE LA MADELEINE, 75008 PARIS</li>
+        <li>88304464600015</li>
       </ul>
       <h2>2. Intellectual Property</h2>
       <p>
