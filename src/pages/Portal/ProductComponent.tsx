@@ -30,10 +30,10 @@ export default function ProductComponent({ nav }: ProductComponentProps) {
             </p>
           </details>
         </div>
-        <img src={cashpool} className="illustration" alt="cashpool"/>
+        <img src={cashpool} className="illustration" alt="cashpool" />
       </div>
-      <div className="product-component page">
-        <img src={crossborderpayments} className="illustration" alt="cross-border payments"/>
+      <div className="product-component page" id="cross-border">
+        <img src={crossborderpayments} className="illustration" alt="cross-border payments" />
         <div>
           <h3>Product</h3>
           <h2>Cross-border payments</h2>

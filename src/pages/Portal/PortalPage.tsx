@@ -13,7 +13,7 @@ export default function PortalPage() {
       <ProductComponent nav="product" />
       <VisionComponent nav="vision" />
       <FeaturesComponent nav="features" />
-      <CallToActionComponent />
+      <CallToActionComponent nav="cta" />
     </>
   );
 }

@@ -1,6 +1,10 @@
-export default function CallToActionComponent() {
+interface CallToActionComponentProps {
+  nav: string;
+}
+
+export default function CallToActionComponent({ nav }: CallToActionComponentProps) {
   return (
-    <div className="call-to-action-component page">
+    <div className="call-to-action-component page" id={nav}>
       <h2>Ready to Revolutionize FX Transactions and Treasury Management?</h2>
       <p>
         Don't miss out on the future of finance.

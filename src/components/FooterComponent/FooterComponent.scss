@@ -1,10 +1,61 @@
 @import "../../utils/variables.scss";
 
 footer {
-  padding: 4rem;
+  margin: 0;
+  padding: 0;
+
   background: $brand-linear-gradient;
+
+  .content {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8rem;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .mentions {
+    align-self: center;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-wrap: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   .social-link {
     fill: white;
+  }
+
+  svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    a {
+      margin-right: 2rem;
+    }
   }
 }
