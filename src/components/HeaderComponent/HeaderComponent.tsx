@@ -22,7 +22,7 @@ export default function HeaderComponent() {
   return (
     <header className={cx("header-component", { "is-scrolled": hasScrolled })}>
       <h1>
-        <a href="#top">
+        <a href="/#top">
           <img src={sflogo} alt="logo" />
           SolideFinance
         </a>
@@ -30,13 +30,13 @@ export default function HeaderComponent() {
       <nav>
         <ul>
           <li>
-            <a href="#mission">Mission</a>
+            <a href="/#mission">Mission</a>
           </li>
           <li>
-            <a href="#product">Product</a>
+            <a href="/#product">Product</a>
           </li>
           <li>
-            <a href="#vision">Vision</a>
+            <a href="/#vision">Vision</a>
           </li>
           {/* <li>
             <a href="#about">About</a>

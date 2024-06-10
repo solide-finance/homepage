@@ -7,13 +7,13 @@ export default function FooterComponent() {
     <footer>
       <div className="content">
         <nav>
-          <a href="#top">Home</a>
-          <a href="#mission">Mission</a>
-          <a href="#product">Cash pooling</a>
-          <a href="#cross-border">Cross-border payments</a>
-          <a href="#vision">vision</a>
-          <a href="#features">Key features</a>
-          <a href="#cta">Schedule a demo</a>
+          <a href="/#top">Home</a>
+          <a href="/#mission">Mission</a>
+          <a href="/#product">Cash pooling</a>
+          <a href="/#cross-border">Cross-border payments</a>
+          <a href="/#vision">vision</a>
+          <a href="/#features">Key features</a>
+          <a href="/#cta">Schedule a demo</a>
         </nav>
         <div className="mentions">
           <p>SolideFinance SAS is incorporated in France under the number 979 290 889 00018.</p>
@@ -22,7 +22,7 @@ export default function FooterComponent() {
 
           <div className="links">
             <a href="/pressbook.pdf">Press</a>
-            <a href="/">Legal notice</a>
+            <a href="/legal-notice">Legal notice</a>
             <a href="mailto:hello@solide.fi">contact</a>
             <a
               aria-label="Solide Finance LinkedIn"

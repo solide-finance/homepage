@@ -1,7 +1,8 @@
 import "@fontsource/inter";
 import "@fontsource/poppins";
 
-import PortalPage from "./pages/Portal/PortalPage";
+import { Outlet } from "react-router-dom";
+
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       <HeaderComponent />
       <main>
-        <PortalPage />
+        <Outlet />
       </main>
       <FooterComponent />
     </div>
