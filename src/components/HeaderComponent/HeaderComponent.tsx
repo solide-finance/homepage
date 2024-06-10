@@ -23,7 +23,7 @@ export default function HeaderComponent() {
     <header className={cx("header-component", { "is-scrolled": hasScrolled })}>
       <h1>
         <a href="#top">
-          <img src={sflogo}></img>SolideFinance
+          <img src={sflogo} alt="logo"/>SolideFinance
         </a>
       </h1>
       <nav>

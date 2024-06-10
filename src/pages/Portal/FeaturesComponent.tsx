@@ -21,14 +21,14 @@ export default function FeaturesComponent({ nav }: FeaturesComponentProps) {
     <div className="features-component page" id={nav}>
       <h3>Key features</h3>
       <dl>
-        <Feature asset={api}>FX Infrastructure as a Service embed as an API or SDK</Feature>
-        <Feature asset={lowFees}>Low & Transparent Fees. Enjoy lower costs compared to traditional methods</Feature>
-        <Feature asset={a247}>Instant Trading. Immediate execution of trades for optimal efficiency</Feature>
-        <Feature asset={regulated}>Fully Regulated. All funds are 100% KYCed. Know your counterparty</Feature>
-        <Feature asset={fx}>EUR - USD - GBP</Feature>
-        <Feature asset={secured}>Security. Low slippage. No impermanent loss</Feature>
-        <Feature asset={virtualaccount}>Virtual Accounts</Feature>
-        <Feature asset={block}>Large Liquidity Pool. Ensuring seamless transactions without delays</Feature>
+        <Feature asset={api} alt="apis">FX Infrastructure as a Service embed as an API or SDK</Feature>
+        <Feature asset={lowFees} alt="low fees">Low & Transparent Fees. Enjoy lower costs compared to traditional methods</Feature>
+        <Feature asset={a247} alt="24/7 trading">Instant Trading. Immediate execution of trades for optimal efficiency</Feature>
+        <Feature asset={regulated} alt="KYC">Fully Regulated. All funds are 100% KYCed. Know your counterparty</Feature>
+        <Feature asset={fx} alt="foreign exchange">EUR - USD - GBP</Feature>
+        <Feature asset={secured} alt="secured">Security. Low slippage. No impermanent loss</Feature>
+        <Feature asset={virtualaccount} alt="virtual accounts">Virtual Accounts</Feature>
+        <Feature asset={block} alt="unlimited liquidity">Large Liquidity Pool. Ensuring seamless transactions without delays</Feature>
       </dl>
     </div>
   );
@@ -36,13 +36,14 @@ export default function FeaturesComponent({ nav }: FeaturesComponentProps) {
 
 interface FeatureProp {
   asset: string;
+  alt: string;
 }
 
-function Feature({ asset, children }: PropsWithChildren<FeatureProp>) {
+function Feature({ asset, alt, children }: PropsWithChildren<FeatureProp>) {
   return (
     <div>
       <dt>
-        <img src={asset} />
+        <img src={asset} alt={alt}/>
       </dt>
       <dd>{children}</dd>
     </div>
