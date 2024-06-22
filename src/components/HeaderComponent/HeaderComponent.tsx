@@ -43,9 +43,14 @@ export default function HeaderComponent() {
           </li> */}
         </ul>
       </nav>
-      <a href="mailto:hello@solide.fi" className="button-like">
-        Contact
-      </a>
+      <div className="actions">
+        <a href="mailto:hello@solide.fi" className="button-like" style={{"fontSize": "2em"}}>
+        &#9743;
+        </a>
+        <a href="mailto:hello@solide.fi" className="button-like">
+          Login <span>-&gt;</span>
+        </a>
+      </div>
     </header>
   );
 }

@@ -65,6 +65,16 @@
     }
   }
 
+  .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      margin-left: 1em;
+    }
+  }
+
   a.button-like {
     @include ButtonComponent.button-base();
 
