@@ -39,9 +39,9 @@ export default function HeaderComponent() {
             <li>
               <a href="/#vision">Vision</a>
             </li>
-            {/* <li>
-            <a href="#about">About</a>
-          </li> */}
+            <li>
+              <a href="/#features">Features</a>
+            </li>
           </ul>
         </nav>
         <div className="actions">
@@ -75,9 +75,14 @@ export default function HeaderComponent() {
               <li>
                 <a href="/#vision">Vision</a>
               </li>
-              {/* <li>
-            <a href="#about">About</a>
-          </li> */}
+              <li>
+                <a href="/#features">Features</a>
+              </li>
+              <li>
+                <a href="mailto:hello@solide.fi">
+                  Contact <span>&#9743;</span>
+                </a>
+              </li>
             </ul>
           </nav>
         </details>
