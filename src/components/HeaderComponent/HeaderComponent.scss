@@ -100,6 +100,10 @@
   }
 
   .header-component.mobile {
+    ::marker, ::-webkit-details-marker {
+      display: none;
+    }
+
     &:has(details[open]) {
       background: $brand-linear-gradient;
     }
@@ -141,6 +145,7 @@
     }
 
     summary {
+      list-style: none;
       display: flex;
       align-items: center;
       justify-content: space-between;

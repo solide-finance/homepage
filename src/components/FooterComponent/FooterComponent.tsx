@@ -24,6 +24,8 @@ export default function FooterComponent() {
             <a href="/pressbook.pdf">Press</a>
             <a href="/legal-notice">Legal notice</a>
             <a href="mailto:hello@solide.fi">contact</a>
+          </div>
+          <div className="links">
             <a
               aria-label="Solide Finance LinkedIn"
               href="https://www.linkedin.com/company/solide-fi"
