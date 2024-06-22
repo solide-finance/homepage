@@ -11,17 +11,11 @@ footer {
     max-width: 1280px;
     margin: 0 auto;
     padding: 8rem;
-    justify-content: space-between;
   }
 
   nav {
     display: flex;
     flex-direction: column;
-    align-self: center;
-  }
-
-  .mentions {
-    align-self: center;
   }
 
   a {
@@ -50,12 +44,42 @@ footer {
 
   .links {
     display: flex;
-    flex-direction: row;
-
-    align-items: center;
 
     a {
       margin-right: 2rem;
+    }
+  }
+}
+
+@media (width >= $mobile-width-breakpoint) {
+  footer {
+    .content {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .mentions {
+      align-self: center;
+    }
+
+    .links {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+@media (width < $mobile-width-breakpoint) {
+  footer {
+    .content {
+      flex-direction: column;
+    }
+
+    .mentions {
+    }
+
+    .links {
+      flex-direction: column;
     }
   }
 }

@@ -76,7 +76,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (width >= $mobile-width-breakpoint) {
   .header-component.mobile {
     display: none;
   }
@@ -94,13 +94,12 @@
   }
 }
 
-@media (width < 1024px) {
+@media (width < $mobile-width-breakpoint) {
   .header-component.desktop {
     display: none;
   }
 
   .header-component.mobile {
-
     &:has(details[open]) {
       background: $brand-linear-gradient;
     }
