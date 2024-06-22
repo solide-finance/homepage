@@ -1,12 +1,16 @@
 .features-component {
+  &.page {
+    padding: 0;
+  }
+
   dl {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 25%));
+    gap: auto;
   }
 
   dl > div {
-    flex: 1 0 15%;
-    margin: 0 4rem 4rem 4rem;
+    padding: 2rem;
     flex-direction: column;
     justify-content: space-around;
   }

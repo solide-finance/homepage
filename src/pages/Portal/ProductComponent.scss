@@ -32,6 +32,10 @@
     > img {
       width: 38%;
     }
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
   }
 }
 
