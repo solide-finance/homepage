@@ -11,6 +11,7 @@ export default function ProductComponent({ nav }: ProductComponentProps) {
   return (
     <>
       <div className="product-component page" id={nav}>
+        <img src={cashpool} className="illustration" alt="cashpool" />
         <div>
           <h3>Product</h3>
           <h2>Cash pooling</h2>
@@ -30,8 +31,8 @@ export default function ProductComponent({ nav }: ProductComponentProps) {
             </p>
           </details>
         </div>
-        <img src={cashpool} className="illustration" alt="cashpool" />
       </div>
+
       <div className="product-component page" id="cross-border">
         <img src={crossborderpayments} className="illustration" alt="cross-border payments" />
         <div>

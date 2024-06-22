@@ -83,3 +83,19 @@ main {
     }
   }
 }
+
+@media (width < $mobile-width-breakpoint) {
+  .App {
+    font-size: 1.2rem;
+  }
+  
+  main {
+    .page {
+      margin-top: 2rem;
+    }
+
+    a.button-like {
+      font-size: 1rem;
+    }
+  }
+}
