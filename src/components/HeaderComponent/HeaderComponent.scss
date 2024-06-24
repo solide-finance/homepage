@@ -10,8 +10,6 @@
   position: sticky;
   top: 0;
 
-  padding: 4rem;
-
   &.is-scrolled {
     background: $brand-linear-gradient;
   }
@@ -73,12 +71,14 @@
   }
 }
 
-@media (width >= $mobile-width-breakpoint) {
+@media (min-width: calc($mobile-width-breakpoint)) {
   .header-component.mobile {
     display: none;
   }
 
   .header-component.desktop {
+    padding: 4rem;
+
     nav li {
       margin: 0 1rem;
     }
@@ -95,12 +95,14 @@
   }
 }
 
-@media (width < $mobile-width-breakpoint) {
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
   .header-component.desktop {
     display: none;
   }
 
   .header-component.mobile {
+    padding: 2rem;
+
     ::marker,
     ::-webkit-details-marker {
       display: none;

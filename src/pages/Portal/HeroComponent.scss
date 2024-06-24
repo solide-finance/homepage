@@ -35,7 +35,7 @@
   }
 }
 
-@media (width < $mobile-width-breakpoint) {
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
   .hero-component {
     label {
       font-size: 1rem;

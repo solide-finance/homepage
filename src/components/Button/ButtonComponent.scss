@@ -13,8 +13,10 @@
   font-weight: 300;
 
   span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    align-content: center;
 
     width: calc($basePadding * 3);
     height: calc($basePadding * 3);

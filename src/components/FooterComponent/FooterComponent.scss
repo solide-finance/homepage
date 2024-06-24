@@ -51,7 +51,7 @@ footer {
   }
 }
 
-@media (width >= $mobile-width-breakpoint) {
+@media (min-width: $mobile-width-breakpoint) {
   footer {
     .content {
       justify-content: space-between;
@@ -73,7 +73,7 @@ footer {
   }
 }
 
-@media (width < $mobile-width-breakpoint) {
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
   footer {
     .content {
       flex-direction: column;

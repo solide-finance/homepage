@@ -1,24 +1,29 @@
+@import "../../utils/variables.scss";
+
 .features-component {
   &.page {
     padding: 0;
   }
 
   dl {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 25%));
-    gap: auto;
-  }
-
-  dl > div {
-    padding: 2rem;
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 
+  dl > div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex-basis: 20%;
+    flex-grow: 0;
+  }
+
   dt {
-    display: inline-grid;
-    place-content: center;
+    display: flex;
     aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
     padding: 4rem;
     background-color: white;
     border-radius: 4rem;
@@ -30,7 +35,15 @@
   }
 
   img {
-    height: 100%;
     width: 100%;
+  }
+}
+
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
+  .features-component {
+    dt {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
   }
 }

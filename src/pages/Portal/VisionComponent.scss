@@ -12,7 +12,7 @@
   }
 }
 
-@media (width < $mobile-width-breakpoint) {
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
   .vision-component {
     p {
       width: 100%;

@@ -21,7 +21,7 @@
   }
 }
 
-@media (width >= $mobile-width-breakpoint) {
+@media (min-width: $mobile-width-breakpoint) {
   .product-component {
     justify-content: space-between;
 
@@ -39,12 +39,12 @@
   }
 }
 
-@media (width < $mobile-width-breakpoint) {
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
   .product-component {
     flex-direction: column;
 
     > img {
-      max-width: 50%;
+      width: 100%;
     }
   }
 }
