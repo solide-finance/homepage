@@ -48,7 +48,7 @@ export default function HeaderComponent() {
           <a href="mailto:hello@solide.fi" className="button-like" style={{ fontSize: "2em" }}>
             &#9743;
           </a>
-          <a href="mailto:hello@solide.fi" className="button-like">
+          <a href="https://demo.solide.fi" className="button-like">
             Login <span>-&gt;</span>
           </a>
         </div>
