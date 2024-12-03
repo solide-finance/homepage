@@ -13,6 +13,9 @@ export default function FooterComponent() {
           <a href="/#cross-border">Cross-border payments</a>
           <a href="/#vision">vision</a>
           <a href="/#features">Key features</a>
+          <a href="https://solidefinance.gitbook.io/solidefinance-api" target="_blank">
+            Developers
+          </a>
           <a href="/#cta">Schedule a demo</a>
         </nav>
         <div className="mentions">

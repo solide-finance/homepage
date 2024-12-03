@@ -42,6 +42,11 @@ export default function HeaderComponent() {
             <li>
               <a href="/#features">Features</a>
             </li>
+            <li>
+              <a href="https://solidefinance.gitbook.io/solidefinance-api" target="_blank">
+                Developers
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="actions">
@@ -77,6 +82,11 @@ export default function HeaderComponent() {
               </li>
               <li>
                 <a href="/#features">Features</a>
+              </li>
+              <li>
+                <a href="https://solidefinance.gitbook.io/solidefinance-api" target="_blank">
+                  Developers
+                </a>
               </li>
               <li>
                 <a href="mailto:hello@solide.fi">
