@@ -49,6 +49,7 @@ export default function FooterComponent() {
           </div>
         </div>
         <div className="legal">
+          <a href="https://solide-finance.kamealabs.com/">Invest</a>
           <a href="/pressbook.pdf">Press</a>
           <a href="/legal-notice">Legal notice</a>
           (c) {year} Solide Finance SAS. All rights reserved.
