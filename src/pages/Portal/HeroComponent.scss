@@ -1,52 +1,56 @@
 @import "../../utils/variables.scss";
 
 .hero-component {
-  $maxWidth: 50rem;
-
+  display: flex;
   height: calc(100vh - 12rem);
   align-content: center;
 
-  background-image: url(../../assets/dots.png);
-  background-size: 50%;
+  background-image: url(../../assets/v2/world.png);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-size: cover;
+  background-position: center bottom;
 
-  label {
-    display: inline-flex;
-    margin: 0.5rem;
-    margin-left: 0;
-    border-radius: 2rem;
-    padding: 1rem;
-    background-color: #b3aaff;
-    color: black;
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    height: 100%;
   }
 
   h2 {
-    max-width: $maxWidth;
-    margin: 4rem 0 2rem 0;
-    font-size: 3.6rem;
-    font-weight: 700;
+    margin: 4rem auto 2rem auto;
+    padding-top: 20vh;
+    max-width: 110rem;
+
+    font-size: 6rem;
+    font-weight: 100;
+    text-align: center;
   }
 
   p {
-    max-width: $maxWidth;
-    font-size: 2.4rem;
-    font-weight: 100;
+    margin: 2rem auto;
+    max-width: 80rem;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
   }
 }
 
 @media (max-width: calc($mobile-width-breakpoint - 1px)) {
   .hero-component {
-    label {
-      font-size: 1rem;
+    .hero-content {
+      margin: 0 4rem;
     }
 
     h2 {
-      font-size: 2.4rem;
+      padding-top: 6vh;
+      font-size: 3rem;
     }
 
     p {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
   }
 }

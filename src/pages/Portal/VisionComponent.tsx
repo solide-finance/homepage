@@ -6,11 +6,10 @@ interface VisionComponentProps {
 
 export default function VisionComponent({ nav }: VisionComponentProps) {
   return (
-    <div className="vision-component page alternate" id={nav}>
-      <h3>Vision</h3>
+    <div className="vision-component" id={nav}>
       <p>
-        We envision to bridge future technologies and traditional finance, empowering financial institutions to provide
-        superior services to their SMBs clients in cross-border payments and treasury management.
+        We envision to bridge future technologies with traditional finance, enabling financial institutions to deliver
+        superior cross-border payment and treasury management solutions to their clients.
       </p>
     </div>
   );

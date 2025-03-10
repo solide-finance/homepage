@@ -1,22 +1,21 @@
 @use "src/components/Button/ButtonComponent.scss";
 
-@import "@fontsource/poppins/100.css";
-@import "@fontsource/poppins/300.css";
-@import "@fontsource/poppins/400.css";
-@import "@fontsource/poppins/700.css";
-@import "@fontsource/poppins/900.css";
+@import "@fontsource/roboto/100.css";
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/700.css";
+@import "@fontsource/roboto/900.css";
 
 @import "./utils/variables.scss";
 
 html {
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-size: 10px;
-  color: white;
+  color: #0a283c;
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(135deg, #13072e, #3f2182);
   min-height: 100vh;
   margin: 0;
 }
@@ -35,18 +34,21 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0 4rem;
   margin-top: 4rem;
-  margin: 0 auto;
-  max-width: 1280px;
+  margin: 0;
 
   .page {
-    margin: 16rem 0;
+    margin: 4rem auto 0 auto;
     padding: 2rem 4rem;
+    max-width: 1280px;
     border-radius: 2rem;
     font-weight: 300;
 
     scroll-margin-top: 20rem;
+
+    h3 {
+      margin-bottom: 4rem;
+    }
   }
 
   h2 {
@@ -55,19 +57,11 @@ main {
 
   h3 {
     text-transform: uppercase;
+    font-size: 1.5rem;
   }
 
   a.button-like {
     @include ButtonComponent.button-base();
-
-    display: inline-flex;
-
-    margin-top: 6rem;
-    font-size: 1.6rem;
-
-    background-color: white;
-    text-decoration: none;
-    color: black;
   }
 
   .alternate {
@@ -75,11 +69,11 @@ main {
 
     h2,
     h3 {
-      color: $purple;
+      color: $blue-dark;
     }
 
     p {
-      color: $purple-dark;
+      color: $blue-dark;
     }
   }
 }
@@ -90,11 +84,10 @@ main {
   }
 
   main {
-    padding: 0 2rem;
+    padding: 0;
 
     .page {
       margin-top: 2rem;
-      margin-bottom: 8rem;
     }
 
     a.button-like {

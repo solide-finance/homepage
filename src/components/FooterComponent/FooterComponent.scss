@@ -4,78 +4,64 @@ footer {
   margin: 0;
   padding: 0;
 
-  background: $brand-linear-gradient;
-
-  .content {
-    display: flex;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 4rem;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-  }
-
   a {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: white;
+    color: inherit;
     text-decoration: none;
-    text-wrap: nowrap;
 
     &:hover {
       text-decoration: underline;
     }
   }
 
-  .social-link {
-    fill: white;
-  }
-
-  svg {
+  .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 3rem;
+    flex-direction: column;
+    padding: 4rem;
   }
 
-  .links {
+  .columns {
     display: flex;
+    flex-direction: row;
+    gap: 4rem;
 
-    a {
-      margin-right: 2rem;
+    > div {
+      flex: 1;
+
+      font-size: 1.4rem;
+      font-weight: 300;
     }
   }
-}
 
-@media (min-width: $mobile-width-breakpoint) {
-  footer {
-    .content {
-      justify-content: space-between;
-      flex-direction: row;
-    }
+  .mentions h5 img {
+    width: 20rem;
+  }
 
-    .mentions {
-      align-self: center;
-    }
+  .social svg {
+    width: 4rem;
+    height: 4rem;
+  }
 
-    .links {
-      flex-direction: row;
-      align-items: center;
+  .legal {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-self: self-end;
 
-      a:has(svg) {
-        margin: 0;
-      }
+    > * {
+      margin-right: 4rem;
     }
   }
 }
 
 @media (max-width: calc($mobile-width-breakpoint - 1px)) {
-  footer {
-    .content {
+  footer .content {
+    .columns {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .legal {
+      align-self: self-start;
       flex-direction: column;
     }
   }

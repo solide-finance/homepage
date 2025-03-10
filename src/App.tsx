@@ -1,5 +1,5 @@
 import "@fontsource/inter";
-import "@fontsource/poppins";
+import "@fontsource/roboto";
 
 import { Outlet } from "react-router-dom";
 
