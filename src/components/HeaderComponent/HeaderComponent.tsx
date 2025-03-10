@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import cx from "classnames";
 
-import sflogo from "../../assets/sflogo.png";
+import sflogo from "../../assets/v2/sflogo.svg";
+import NeArrow from "../../assets/v2/ne-arrow.svg?react";
+
 import "./HeaderComponent.scss";
 
 export default function HeaderComponent() {
@@ -25,7 +27,6 @@ export default function HeaderComponent() {
         <h1>
           <a href="/#top">
             <img src={sflogo} alt="logo" />
-            SolideFinance
           </a>
         </h1>
         <nav>
@@ -34,10 +35,7 @@ export default function HeaderComponent() {
               <a href="/#mission">Mission</a>
             </li>
             <li>
-              <a href="/#product">Product</a>
-            </li>
-            <li>
-              <a href="/#vision">Vision</a>
+              <a href="/#services">Services</a>
             </li>
             <li>
               <a href="/#features">Features</a>
@@ -47,14 +45,17 @@ export default function HeaderComponent() {
                 Developers
               </a>
             </li>
+            <li>
+              <a href="/#contact">Contact</a>
+            </li>
           </ul>
         </nav>
         <div className="actions">
-          <a href="mailto:hello@solide.fi" className="button-like" style={{ fontSize: "2em" }}>
-            &#9743;
-          </a>
           <a href="https://demo.solide.fi" className="button-like">
-            Login <span>-&gt;</span>
+            Access demo{" "}
+            <span>
+              <NeArrow />
+            </span>
           </a>
         </div>
       </header>
@@ -64,7 +65,6 @@ export default function HeaderComponent() {
             <h1>
               <a href="/#top">
                 <img src={sflogo} alt="logo" />
-                SolideFinance
               </a>
             </h1>
             <span className="expanded-indicator">&nbsp;</span>
@@ -75,10 +75,7 @@ export default function HeaderComponent() {
                 <a href="/#mission">Mission</a>
               </li>
               <li>
-                <a href="/#product">Product</a>
-              </li>
-              <li>
-                <a href="/#vision">Vision</a>
+                <a href="/#services">Services</a>
               </li>
               <li>
                 <a href="/#features">Features</a>
@@ -89,8 +86,11 @@ export default function HeaderComponent() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@solide.fi">
-                  Contact <span>&#9743;</span>
+                <a href="https://demo.solide.fi" className="button-like" target="_blank">
+                  Access demo{" "}
+                  <span>
+                    <NeArrow />
+                  </span>
                 </a>
               </li>
             </ul>

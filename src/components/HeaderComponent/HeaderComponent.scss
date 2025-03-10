@@ -11,7 +11,7 @@
   top: 0;
 
   &.is-scrolled {
-    background: $brand-linear-gradient;
+    background: white;
   }
 
   h1 {
@@ -24,7 +24,6 @@
 
     a {
       text-decoration: none;
-      color: white;
     }
   }
 
@@ -43,9 +42,10 @@
   }
 
   nav li a {
-    color: white;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
+
+    color: $blue-dark;
 
     &:hover {
       text-decoration: underline;
@@ -64,10 +64,6 @@
 
   a.button-like {
     @include ButtonComponent.button-base();
-
-    text-decoration: none;
-    background-color: white;
-    color: black;
   }
 }
 
@@ -84,9 +80,7 @@
     }
 
     img {
-      margin-right: 1rem;
-      height: 6rem;
-      width: 6rem;
+      width: 24rem;
     }
 
     h1 {
@@ -100,6 +94,12 @@
     display: none;
   }
 
+  .header-component {
+    .header-content {
+      margin: 0 4rem;
+    }
+  }
+
   .header-component.mobile {
     padding: 2rem;
 
@@ -108,14 +108,8 @@
       display: none;
     }
 
-    &:has(details[open]) {
-      background: $brand-linear-gradient;
-    }
-
     img {
-      margin-right: 1rem;
-      width: 3rem;
-      height: 3rem;
+      width: 24rem;
     }
 
     h1 {

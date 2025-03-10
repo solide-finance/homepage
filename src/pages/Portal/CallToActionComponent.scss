@@ -1,0 +1,33 @@
+@import "../../utils/variables.scss";
+
+.call-to-action-component {
+  background-image: url(../../assets/v2/world-side.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  .component-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem;
+  }
+
+  h2 {
+    width: 50%;
+    font-size: 4.5rem;
+  }
+
+  p {
+    width: 40%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: calc($mobile-width-breakpoint - 1px)) {
+  .call-to-action-component {
+    h2 {
+      width: 80%;
+      font-size: 2.4rem;
+    }
+  }
+}
