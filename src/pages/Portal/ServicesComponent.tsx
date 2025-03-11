@@ -1,6 +1,14 @@
 import "./ServicesComponent.scss";
 
 import NeArrow from "../../assets/v2/ne-arrow.svg?react";
+import SvcInterbank from "../../assets/v2/svc-interbank.svg?react";
+import SvcInterop from "../../assets/v2/svc-interop.svg?react";
+import SvcMonetize from "../../assets/v2/svc-monetize.svg?react";
+import SvcNetwork from "../../assets/v2/svc-network.svg?react";
+import SvcOnOffRamp from "../../assets/v2/svc-onofframp.svg?react";
+import SvcOpenBanking from "../../assets/v2/svc-openbanking.svg?react";
+import SvcPaymentsInfra from "../../assets/v2/svc-paymentsinfra.svg?react";
+import SvcStablecoins from "../../assets/v2/svc-stablecoins.svg?react";
 
 interface ServicesComponentProps {
   nav: string;
@@ -28,6 +36,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
       </div>
       <div className="carousel">
         <div>
+          <span className="icon">
+            <SvcPaymentsInfra />
+          </span>
           <h5>Payments infrastructure</h5>
           <p>
             SolideFinance provides banks with an intermediary-free EUR/USD payment infrastructure, delivering faster
@@ -37,6 +48,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcNetwork />
+          </span>
           <h5>A worldwide network of correspondent banking</h5>
           <p>
             With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional
@@ -46,6 +60,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcMonetize />
+          </span>
           <h5>Cash pooling management</h5>
           <p>
             SolideFinance’s cash pooling solution allows banks to offer corporate clients seamless liquidity management
@@ -55,6 +72,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcInterop />
+          </span>
           <h5>Interoperability & Access to digital assets</h5>
           <p>
             Financial institutions looking to expand their digital asset offerings can leverage SolideFinance’s secure
@@ -64,6 +84,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcOpenBanking />
+          </span>
           <h5>Open banking infrastructure</h5>
           <p>
             SolideFinance’s technology enables financial institutions to seamlessly deploy cost-efficient and scalable
@@ -73,6 +96,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcInterbank />
+          </span>
           <h5>Next-Generation Interbank Payment Network</h5>
           <p>
             SolideNetwork offers a cost-effective, efficient, and secure worldwide interbank network for cross-border
@@ -84,6 +110,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcMonetize />
+          </span>
           <h5>Monetizing payments for fintech & software providers</h5>
           <p>
             Fintech and software providers can enhance their offerings by integrating efficient, revenue-generating
@@ -110,6 +139,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
       </div>
       <div className="carousel">
         <div>
+          <span className="icon">
+            <SvcOnOffRamp />
+          </span>
           <h5>Automatic crypto on- and off-ramp via API</h5>
           <p>
             Management firms benefit from automated crypto on- and off-ramping at a competitive fee through our API,
@@ -118,6 +150,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcStablecoins />
+          </span>
           <h5>Access to Stablecoins and Cryptocurrencies</h5>
           <p>
             SolideFinance provides on- and off-ramp solutions for new stablecoins and cryptocurrencies, allowing
@@ -125,6 +160,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcNetwork />
+          </span>
           <h5>A worldwide network of correspondent banking</h5>
           <p>
             With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional
@@ -134,6 +172,9 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </p>
         </div>
         <div>
+          <span className="icon">
+            <SvcStablecoins />
+          </span>
           <h5>A cost-effective crypto-to-fiat infrastructure</h5>
           <p>
             Reduce intermediaries to offer crypto-to-fiat services: SolideFinance offers financial institutions a
