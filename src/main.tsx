@@ -1,10 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ConfigProvider } from "antd";
+import type { ThemeConfig } from "antd/es/config-provider/context";
 
 import App from "./App.tsx";
 import PortalPage from "./pages/Portal/PortalPage";
 import LegalNoticePage from "./pages/LegalNotice/LegalNotice.tsx";
+
+const theme: ThemeConfig = {
+  token: {
+    fontFamily: "Roboto, sans-serif"
+  }
+};
 
 const router = createBrowserRouter([
   {
@@ -25,6 +33,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ConfigProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ConfigProvider>
   </React.StrictMode>
 );
