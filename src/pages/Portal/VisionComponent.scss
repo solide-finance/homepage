@@ -4,12 +4,13 @@
   background-color: #0a283c;
 
   p {
-    margin: 10rem auto;
+    margin: 10rem 2rem 10rem 4.5rem;
     width: 60%;
 
     font-size: 4.5rem;
     font-weight: 100;
     color: white;
+    line-height: 1.5;
   }
 }
 
@@ -17,6 +18,8 @@
   .vision-component {
     p {
       font-size: 2.4rem;
+      width: 65%;
+      margin-right: 0.5rem;
     }
   }
 }

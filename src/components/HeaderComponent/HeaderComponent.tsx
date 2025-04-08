@@ -86,12 +86,14 @@ export default function HeaderComponent() {
                 </a>
               </li>
               <li>
+                <hr className="demo-line" />
                 <a href="https://demo.solide.fi" className="button-like" target="_blank">
                   Access demo{" "}
                   <span>
                     <NeArrow />
                   </span>
                 </a>
+                <hr className="demo-line" />
               </li>
             </ul>
           </nav>

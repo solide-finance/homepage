@@ -1,6 +1,10 @@
 @import "../../utils/variables.scss";
 
 .services-component {
+  h3 {
+    margin-left: 3rem;
+  }
+
   &.page {
     padding-bottom: 8rem;
   }
@@ -18,6 +22,7 @@
       max-width: 80%;
       text-align: center;
       margin: 2rem auto;
+      line-height: 1.8;
     }
 
     &:not(:first-of-type) {
@@ -102,6 +107,12 @@
         width: 260px;
       }
     }
+  }
+}
+
+@media (max-width: 1023px) {
+  .services-component .head a.button-like {
+    font-size: 1.8rem;
   }
 }
 
@@ -392,5 +403,19 @@
     > .ant-collapse-header
     .ant-collapse-arrow {
     display: none;
+  }
+}
+
+.button-like.light {
+  border: 1px $blue-dark;
+  color: $blue-dark;
+  background-color: transparent;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $blue-dark;
+    color: white;
   }
 }
