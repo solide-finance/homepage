@@ -97,6 +97,10 @@
   @media (max-width: 768px) {
     .section-divider {
       gap: 1rem;
+
+      img {
+        width: 260px;
+      }
     }
   }
 }
