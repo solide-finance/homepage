@@ -1,15 +1,18 @@
-@import "../../utils/variables.scss";
-
 .features-component {
   dl {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  h3 {
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
 
   dl > div {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 2rem;
     flex-basis: 20%;
     flex-grow: 0;
@@ -17,29 +20,28 @@
 
   dt {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 4rem;
-  }
-
-  dd {
-    margin: 2rem 0;
-  }
-
-  h5 {
-    font-size: 2.2rem;
+    padding: 0;
   }
 
   img {
     width: 6rem;
     height: 6rem;
+    margin-bottom: 1.5rem;
   }
-}
 
-@media (max-width: calc($mobile-width-breakpoint - 1px)) {
-  .features-component {
-    dt {
-      padding: 2rem;
-      border-radius: 2rem;
-    }
+  h5 {
+    font-size: 2.2rem;
+    margin: 0 0.5 1.5rem 0;
+    text-align: left;
+  }
+
+  dd {
+    margin: 0;
+    text-align: left;
+    margin-bottom: 1.5rem;
   }
 }

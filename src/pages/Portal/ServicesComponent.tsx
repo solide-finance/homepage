@@ -489,7 +489,10 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
         <div className="section-divider">
           <div className="line" />
           <a href="https://www.f6s.com/company/solidefinance" target="_blank" rel="noopener noreferrer">
-            <img src={F6SBadge} alt="F6S Badge" />
+            <img
+              src={F6SBadge}
+              alt="SolideFinance ranked No8 on the 79 top FinTech companies and startups in France in March 2025"
+            />
           </a>
           <div className="line" />
         </div>
