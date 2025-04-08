@@ -97,6 +97,10 @@
   @media (max-width: 768px) {
     .section-divider {
       gap: 1rem;
+
+      img {
+        width: 260px;
+      }
     }
   }
 }
@@ -212,5 +216,181 @@
 
   .mobile-only {
     display: block;
+  }
+}
+
+.accordion-view {
+  .slick-slide {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+  .carousel-slide {
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .ant-carousel {
+    margin-bottom: 2rem;
+  }
+
+  .slick-dots {
+    margin-top: 5rem;
+    position: relative;
+  }
+
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  .slick-prev::before,
+  .slick-next::before {
+    color: $blue-dark;
+    font-size: 28px;
+    opacity: 1;
+    transition: color 0.3s;
+  }
+
+  .slick-prev:hover::before,
+  .slick-next:hover::before {
+    color: $very-blue-dark;
+  }
+
+  .ant-collapse-arrow {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .ant-collapse-item:first-of-type {
+      border-top: 1px solid $very-light-gray;
+      border-radius: 0;
+    }
+  }
+  .carousel-slide {
+    padding: 2rem;
+    background-color: $gray-light;
+    border-radius: 1rem;
+    max-width: 100%;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $blue-dark;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 1rem;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main .page {
+    margin: 0;
+    padding: 1rem 1rem;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .ant-collapse {
+    background: none;
+    border: none;
+  }
+
+  .ant-collapse-item {
+    border: none;
+    background: none;
+  }
+
+  .ant-collapse-header {
+    position: relative;
+    padding-right: 2.5rem;
+    background: none;
+    padding: 1.5rem 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 3rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: url("../../assets/v2/Icone_Fleche_UP.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition:
+        transform 0.3s ease,
+        background-image 0.3s ease;
+    }
+  }
+
+  .ant-collapse-item-active > .ant-collapse-header::before {
+    background-image: url("../../assets/v2/Icone_Fleche_DOWN.png");
+  }
+
+  .services-component .accordion-view .ant-collapse .ant-collapse-header {
+    color: $blue-dark;
+  }
+  .services-component .accordion-view .ant-collapse .ant-collapse-content {
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    border-top: none;
+    background-color: transparent;
+  }
+  .services-component .accordion-view .ant-carousel {
+    .slick-dots li {
+      width: 12px;
+      height: 12px;
+      margin: 0 6px;
+
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid $blue-dark;
+        background-color: transparent;
+        opacity: 1;
+        transition:
+          background-color 0.3s,
+          border-color 0.3s;
+      }
+
+      &.slick-active button {
+        background-color: $blue-dark;
+        border-color: $blue-dark;
+      }
+    }
+
+    .slick-dots li::after {
+      display: none;
+    }
+  }
+
+  .services-component
+    .accordion-view
+    :where(.ant-collapse)
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-arrow {
+    display: none;
   }
 }
