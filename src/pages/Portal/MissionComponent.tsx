@@ -20,19 +20,19 @@ export default function MissionComponent({ nav }: HeroComponentProps) {
       <ul>
         <li>
           <h4>Innovation</h4>
-          <img src={innovation} />
+          <img src={innovation} alt="innovation" />
           We have developed our <b>own proprietary market-making technology,</b> enabling us to identify the most
           efficient payment routes worldwide, optimizing cost, speed, and liquidity for financial institutions.
         </li>
         <li>
           <h4>Compliance</h4>
-          <img src={compliance} />
+          <img src={compliance} alt="Compliance" />
           Built to meet the <b>highest regulatory and security standards</b> in European finance, SolideFinance ensures
           full compliance with banking, digital assets, and financial integrity requirements.
         </li>
         <li>
           <h4>Expertise</h4>
-          <img src={expertise} />
+          <img src={expertise} alt="expertise" />
           With deep <b>expertise in complex financial processes and cross border payments,</b> SolideFinance brings a
           wealth of experience in both traditional and digital finance.
         </li>

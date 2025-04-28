@@ -5,6 +5,10 @@ import { Collapse, Carousel } from "antd";
 
 import { motion } from "framer-motion";
 import "./ServicesComponent.scss";
+import LogoSlider from "./LogoSlider";
+import FinanceInnovLogo from "../../assets/v2/logo_finance_innovation.png";
+import AdanLogo from "../../assets/v2/logo_adan.png";
+import FiftyPartners from "../../assets/v2/image.png";
 
 import NeArrow from "../../assets/v2/ne-arrow.svg?react";
 import SvcInterbank from "../../assets/v2/svc-interbank.svg?react";
@@ -496,6 +500,16 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           </a>
           <div className="line" />
         </div>
+        <LogoSlider
+          logos={[
+            { src: FinanceInnovLogo, className: "financeinn-logo", alt: "Finance Innovation" },
+            { src: AdanLogo, className: "adan-logo", alt: "Adan" },
+            { src: FiftyPartners, className: "fifty-partners-logo", alt: "Fifty Partners" },
+            { src: FinanceInnovLogo, className: "financeinn-logo", alt: "Finance Innovation" },
+            { src: AdanLogo, className: "adan-logo", alt: "Adan" },
+            { src: FiftyPartners, className: "fifty-partners-logo", alt: "Fifty Partners" }
+          ]}
+        />
       </div>
 
       <h3>Services</h3>

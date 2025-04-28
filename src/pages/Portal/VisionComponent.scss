@@ -12,6 +12,12 @@
     color: white;
     line-height: 1.5;
   }
+
+  @media (min-width: 1024px) {
+    p {
+      margin-left: 9rem;
+    }
+  }
 }
 
 @media (max-width: calc($mobile-width-breakpoint - 1px)) {
