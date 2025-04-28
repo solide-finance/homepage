@@ -1,0 +1,212 @@
+const tab1Services = [
+    { icon: <SvcPaymentsInfra />, title: "Payments infrastructure", desc: "SolideFinance provides banks with an intermediary-free EUR/USD payment infrastructure, delivering faster transactions, reduced costs, and real-time (T+0) settlement. By optimizing FX processes, financial institutions can enhance profitability, competitiveness, and transaction transparency, ensuring compliance while staying ahead in the evolving financial landscape." },
+    { icon: <SvcNetwork />, title: "A worldwide network of correspondent banking", desc: "With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional and decentralized finance (where compliance allows). This network enables institutions to expand into new markets, optimize cross-border payment flows, and enhance financial services while ensuring adherence to regulatory requirements." },
+    { icon: <SvcMonetize />, title: "Cash pooling management", desc: "SolideFinance’s cash pooling solution allows banks to offer corporate clients seamless liquidity management across multiple currencies. The technology centralizes control over multi-currency accounts from a single access point, enabling low-cost fund transfers and consolidated treasury operations as if managed in a single currency, enhancing efficiency and financial oversight." },
+    { icon: <SvcInterop />, title: "Interoperability & Access to digital assets", desc: "Financial institutions looking to expand their digital asset offerings can leverage SolideFinance’s secure on- and off-ramp infrastructure with cross-chain interoperability. This enables seamless access to digital finance services while integrating traditional financial products into decentralized finance, supporting innovation while maintaining compliance and risk management standards." }
+  ];
+
+  const tab2Services = [
+    { icon: <SvcPaymentsInfra />, title: "Payments infrastructure", desc: "SolideFinance provides banks with an intermediary-free EUR/USD payment infrastructure, delivering faster transactions, reduced costs, and real-time (T+0) settlement. By optimizing FX processes, financial institutions can enhance profitability, competitiveness, and transaction transparency, ensuring compliance while staying ahead in the evolving financial landscape." },
+    { icon: <SvcNetwork />, title: "A worldwide network of correspondent banking", desc: "With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional and decentralized finance (where compliance allows). This network enables institutions to expand into new markets, optimize cross-border payment flows, and enhance financial services while ensuring adherence to regulatory requirements." },
+    { icon: <SvcOpenBanking />, title: "Open banking infrastructure", desc: "SolideFinance’s technology enables financial institutions to seamlessly deploy cost-efficient and scalable core banking infrastructure, supporting both local and international currencies. Neo Banks can leverage our infrastructure and certifications to enhance their banking services, optimize operational efficiency, and expand their financial offerings with a robust and compliant foundation." }
+  ];
+
+  const tab3Services = [
+    { icon: <SvcPaymentsInfra />, title: "Payments infrastructure", desc: "SolideFinance provides banks with an intermediary-free EUR/USD payment infrastructure, delivering faster transactions, reduced costs, and real-time (T+0) settlement. By optimizing FX processes, financial institutions can enhance profitability, competitiveness, and transaction transparency, ensuring compliance while staying ahead in the evolving financial landscape." },
+    { icon: <SvcNetwork />, title: "A worldwide network of correspondent banking", desc: "With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional and decentralized finance (where compliance allows). This network enables institutions to expand into new markets, optimize cross-border payment flows, and enhance financial services while ensuring adherence to regulatory requirements." },
+    { icon: <SvcOpenBanking />, title: "Open banking infrastructure", desc: "SolideFinance’s technology enables financial institutions to seamlessly deploy cost-efficient and scalable core banking infrastructure, supporting both local and international currencies. Neo Banks can leverage our infrastructure and certifications to enhance their banking services, optimize operational efficiency, and expand their financial offerings with a robust and compliant foundation." },
+    { icon: <SvcInterbank />, title: "Next-Generation Interbank Payment Network", desc: "SolideNetwork offers a cost-effective, efficient, and secure worldwide interbank network for cross-border transactions. By leveraging blockchain technology and a global network of correspondent banking partners, SolideNetwork enables faster settlements, reduced transaction costs, and enhanced transparency. Designed to meet institutional compliance standards, our solution streamlines international payments while enabling financial institutions to optimize their international payment operations with greater efficiency and reliability."},
+  ]
+
+  const tab4Services = [
+    { icon: <SvcMonetize />, title: "Monetizing payments for fintech & software providers", desc: "Fintech and software providers can enhance their offerings by integrating efficient, revenue-generating payment services. SolideFinance’s banking-as-a-service infrastructure (without being a credit institution) enables seamless embedding of payment capabilities, optimizing payroll, treasury, and cross-border transactions while ensuring compliance, cost savings, and operational efficiency." },
+    { icon: <SvcPaymentsInfra />, title: "Payments infrastructure", desc: "SolideFinance provides banks with an intermediary-free EUR/USD payment infrastructure, delivering faster transactions, reduced costs, and real-time (T+0) settlement. By optimizing FX processes, financial institutions can enhance profitability, competitiveness, and transaction transparency, ensuring compliance while staying ahead in the evolving financial landscape." },
+    { icon: <SvcNetwork />, title: "A worldwide network of correspondent banking", desc: "With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional and decentralized finance (where compliance allows). This network enables institutions to expand into new markets, optimize cross-border payment flows, and enhance financial services while ensuring adherence to regulatory requirements." },
+    { icon: <SvcOpenBanking />, title: "Open banking infrastructure", desc: "SolideFinance’s technology enables financial institutions to seamlessly deploy cost-efficient and scalable core banking infrastructure, supporting both local and international currencies. Neo Banks can leverage our infrastructure and certifications to enhance their banking services, optimize operational efficiency, and expand their financial offerings with a robust and compliant foundation." }
+  ]
+
+  const tab5Services = [
+    { icon: <SvcOnOffRamp />, title: "Automatic crypto on- and off-ramp via API", desc: "Management firms benefit from automated crypto on- and off-ramping at a competitive fee through our API, ensuring efficient conversion of digital assets into fiat currencies all around the world, while maintaining compliance and operational efficiency." },
+    { icon: <SvcStablecoins />, title: "Access to Stablecoins and Cryptocurrencies", desc: "SolideFinance provides on- and off-ramp solutions for new stablecoins and cryptocurrencies, allowing institutions to access a broader range of digital assets with institutional-grade infrastructure." },
+    { icon: <SvcNetwork />, title: "A worldwide network of correspondent banking", desc: "With SolideNetwork, banks gain access to a global correspondent banking network spanning both traditional and decentralized finance (where compliance allows). This network enables institutions to expand into new markets, optimize cross-border payment flows, and enhance financial services while ensuring adherence to regulatory requirements." },
+    { icon: <SvcStablecoins />, title: "Reduce intermediaries to offer crypto-to-fiat services", desc: "SolideFinance offers financial institutions a cost-effective crypto-to-fiat infrastructure. By reducing intermediaries, our solution lowers costs, improves efficiency, and ensures regulatory compliance in crypto-fiat conversions." }
+
+
+
+
+
+    -----------
+
+    .accordion-view {
+  .slick-slide {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+  .carousel-slide {
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ant-carousel {
+    margin-bottom: 2rem;
+  }
+  
+  .slick-dots {
+    margin-top: 5rem;
+    position: relative;
+  }
+  
+  margin-left: -1rem;
+  margin-right: -1rem;
+  
+  .slick-prev::before,
+  .slick-next::before {
+    color: $blue-dark;
+    font-size: 28px;
+    opacity: 1;
+    transition: color 0.3s;
+  }
+
+  .slick-prev:hover::before,
+  .slick-next:hover::before {
+    color: $very-blue-dark;
+  }
+
+  .ant-collapse-arrow {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .ant-collapse-item:first-of-type {
+      border-top: 1px solid $very-light-gray;
+      border-radius: 0;
+    }
+
+  }
+  .carousel-slide {
+    padding: 2rem;
+    background-color: #0a283c08;
+    border-radius: 1rem;
+    max-width: 100%;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $blue-dark;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 1rem;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main .page {
+    margin: 0;
+    padding: 1rem 1rem;
+    max-width: 100%;
+    border-radius: 0 
+  }
+  .ant-collapse {
+    background: none;
+    border: none;
+  }
+
+  .ant-collapse-item {
+    border: none;
+    background: none;
+  }
+
+  .ant-collapse-header {
+    position: relative;
+    padding-right: 2.5rem;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: url("../../assets/v2/Icone_Fleche_UP.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease, background-image 0.3s ease;
+    }
+  }
+  
+  .ant-collapse-item-active > .ant-collapse-header::before {
+    background-image: url("../../assets/v2/Icone_Fleche_DOWN.png");
+  }
+  
+  
+  .services-component .accordion-view .ant-collapse .ant-collapse-header {
+    color: $blue-dark;
+  }
+  .services-component .accordion-view .ant-collapse .ant-collapse-content {
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    border-top: none;
+    background-color: transparent 
+  }
+  .services-component .accordion-view .ant-carousel {
+  .slick-dots li {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+
+    button {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $blue-dark;
+      background-color: transparent;
+      opacity: 1;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    &.slick-active button {
+      background-color: $blue-dark;
+      border-color: $blue-dark;
+    }
+  }
+
+  .slick-dots li::after {
+    display: none;
+  }
+}
+
+.services-component .accordion-view :where(.ant-collapse) > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  display: none;
+}
+}
+
+.button-like.light {
+  border: 1px $blue-dark;
+  color: $blue-dark;
+  background-color: transparent;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $blue-dark;
+    color: white;
+  }
+} dans servicescss
