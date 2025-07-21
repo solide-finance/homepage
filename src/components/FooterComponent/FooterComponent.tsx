@@ -1,4 +1,6 @@
 import sflogo2 from "../../assets/v2/sflogo.svg";
+import FinanceInnovLogo from "../../assets/v2/Logo Finance Innovation (2).png";
+import AdanLogo from "../../assets/v2/Logo couleur Adan (1).png";
 
 import "./FooterComponent.scss";
 
@@ -14,14 +16,23 @@ export default function FooterComponent() {
               <img src={sflogo2} />
             </h5>
             <p>SolideFinance SAS is incorporated in France under the number 979 290 889 00018.</p>
+            <h5>
+              <div className="logo-group">
+                <img src={FinanceInnovLogo} className="finance-innov-logo" />
+                <img src={AdanLogo} className="partner-logo" />
+              </div>
+            </h5>
           </div>
           <div className="addresses">
             <h5>Addresses</h5>
             <p>
-              62 rue Jean-Jacques Rousseau, 75001 <b>Paris</b>, France
+              62 rue Jean-Jacques Rousseau, 75001 <b>Paris</b>, FRANCE
             </p>
             <p>
-              KMØ 30 rue François Spoerry, 68100 <b>Mulhouse</b>, France
+              KMØ 30 rue François Spoerry, 68100 <b>Mulhouse</b>, FRANCE
+            </p>
+            <p>
+              c/o EUREX GE SA - Rue de Genève 18 - 1225 <b>Chêne-Bourg</b>, SWITZERLAND
             </p>
           </div>
           <div className="contact">
@@ -51,8 +62,7 @@ export default function FooterComponent() {
         <div className="legal">
           <a href="https://solide-finance.kamealabs.com/">Invest</a>
           <a href="/pressbook.pdf">Press</a>
-          <a href="/legal-notice">Legal notice</a>
-          (c) {year} Solide Finance SAS. All rights reserved.
+          <a href="/legal-notice">Legal notice</a>© {year} Solide Finance SAS. All rights reserved.
         </div>
       </div>
     </footer>
