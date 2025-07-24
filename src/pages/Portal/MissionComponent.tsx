@@ -26,7 +26,7 @@ export default function MissionComponent({ nav }: HeroComponentProps) {
         </li>
         <li>
           <h4>Compliance</h4>
-          <img src={compliance} />
+          <img src={compliance} alt="Compliance" />
           Built to meet the <b>highest regulatory and security standards</b> in European finance, SolideFinance ensures
           full compliance with banking, digital assets, and financial integrity requirements.
         </li>

@@ -13,13 +13,13 @@ export default function FooterComponent() {
         <div className="columns">
           <div className="mentions">
             <h5>
-              <img src={sflogo2} />
+              <img src={sflogo2} alt="SolideFinance logo" />
             </h5>
             <p>SolideFinance SAS is incorporated in France under the number 979 290 889 00018.</p>
             <h5>
               <div className="logo-group">
-                <img src={FinanceInnovLogo} className="finance-innov-logo" />
-                <img src={AdanLogo} className="partner-logo" />
+                <img src={FinanceInnovLogo} className="finance-innov-logo" alt="Finance Innovation logo" />
+                <img src={AdanLogo} className="partner-logo" alt="ADAN logo"/>
               </div>
             </h5>
           </div>
