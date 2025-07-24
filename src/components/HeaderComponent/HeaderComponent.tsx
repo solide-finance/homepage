@@ -46,7 +46,7 @@ export default function HeaderComponent() {
               </a>
             </li>
             <li>
-              <a href="/#contact">Contact</a>
+              <a href="mailto:hello@solide.fi">Contact</a>
             </li>
           </ul>
         </nav>
