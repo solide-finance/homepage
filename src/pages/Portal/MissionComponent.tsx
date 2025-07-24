@@ -20,7 +20,7 @@ export default function MissionComponent({ nav }: HeroComponentProps) {
       <ul>
         <li>
           <h4>Innovation</h4>
-          <img src={innovation} />
+          <img src={innovation} alt="innovation"/>
           We have developed our <b>own proprietary market-making technology,</b> enabling us to identify the most
           efficient payment routes worldwide, optimizing cost, speed, and liquidity for financial institutions.
         </li>
@@ -32,7 +32,7 @@ export default function MissionComponent({ nav }: HeroComponentProps) {
         </li>
         <li>
           <h4>Expertise</h4>
-          <img src={expertise} />
+          <img src={expertise} alt="expertise" />
           With deep <b>expertise in complex financial processes and cross border payments,</b> SolideFinance brings a
           wealth of experience in both traditional and digital finance.
         </li>
