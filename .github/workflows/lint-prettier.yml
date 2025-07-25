@@ -21,11 +21,13 @@ jobs:
       - name: Prettier
         run: |
           set -e
+          npm install
           npm run prettier-check
 
       - name: Lint in each subproject
         run: |
           set -e
+          npm install
           npm run lint
 
 
