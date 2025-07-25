@@ -24,7 +24,7 @@ jobs:
           npm install
           npm run prettier-check
 
-      - name: Lint in each subproject
+      - name: Lint
         run: |
           set -e
           npm install
