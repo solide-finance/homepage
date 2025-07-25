@@ -1,0 +1,33 @@
+name: Lint and Prettier Check
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10 
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Prettier
+        run: |
+          set -e
+          npm run prettier-check
+
+      - name: Lint in each subproject
+        run: |
+          set -e
+          npm run lint
+
+
+      - name: Done
+        run: echo "Lint and Prettier checks completed successfully."
