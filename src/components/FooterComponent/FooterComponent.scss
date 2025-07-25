@@ -77,3 +77,19 @@ footer {
     }
   }
 }
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.finance-innov-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.partner-logo {
+  max-width: 120px;
+  height: auto;
+}
