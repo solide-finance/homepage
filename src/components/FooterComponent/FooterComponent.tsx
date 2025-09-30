@@ -1,4 +1,7 @@
 import sflogo2 from "../../assets/v2/sflogo.svg";
+import soc2 from "../../assets/v2/soc2.png";
+import iso from "../../assets/v2/iso27001.png";
+
 import "./FooterComponent.scss";
 
 export default function FooterComponent() {
@@ -31,6 +34,13 @@ export default function FooterComponent() {
             <h5>Contact us</h5>
             <a href="mailto:hello@solide.fi">hello@solide.fi</a>
           </div>
+          <div className="trust">
+            <h5>Trust</h5>
+            <a href="https://trust.solide.fi">
+              <img src={iso} width={50} alt="ISO 27001" />
+              <img src={soc2} width={50} alt="SOC2 Type 2" />
+            </a>
+          </div>
           <div className="social">
             <h5>Follow us</h5>
             <p>
@@ -52,7 +62,6 @@ export default function FooterComponent() {
           </div>
         </div>
         <div className="legal">
-          <a href="https://solide-finance.kamealabs.com/">Invest</a>
           <a href="/pressbook.pdf">Press</a>
           <a href="/legal-notice">Legal notice</a>© {year} Solide Finance SAS. All rights reserved.
         </div>

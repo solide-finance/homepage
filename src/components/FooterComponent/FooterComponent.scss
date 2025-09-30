@@ -52,6 +52,15 @@ footer {
     margin-right: 2rem;
   }
 
+  .trust a {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 2rem;
+    }
+  }
+
   .legal {
     margin-top: 4rem;
     font-size: 1.4rem;
