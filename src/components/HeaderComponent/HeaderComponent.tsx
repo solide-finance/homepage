@@ -41,7 +41,7 @@ export default function HeaderComponent() {
               <a href="/#features">Features</a>
             </li>
             <li>
-              <a href="https://solidefinance.gitbook.io/solidefinance-api" target="_blank">
+              <a href="https://solide-network-api.apidocumentation.com/" target="_blank">
                 Developers
               </a>
             </li>
