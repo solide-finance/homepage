@@ -15,19 +15,23 @@ export default function FooterComponent() {
             <h5>
               <img src={sflogo2} alt="SolideFinance logo" />
             </h5>
-            <p>SolideFinance SAS is incorporated in France under the number 979 290 889 00018.</p>
+            <p>
+              SolideFinance SA is incorporated in Switzerland under the number CHE-140.601.494 and affiliated with
+              SO-FIT, a self-regulatory organization (SRO) officially recognized by FINMA.
+            </p>
+            <p>Solide Finance SAS is incorporated in France under the number 979 290 889 00018.</p>
             <h5></h5>
           </div>
           <div className="addresses">
             <h5>Addresses</h5>
             <p>
+              c/o EUREX GE SA - Rue de Genève 18 - 1225 <b>Chêne-Bourg</b>, SWITZERLAND
+            </p>
+            <p>
               62 rue Jean-Jacques Rousseau, 75001 <b>Paris</b>, FRANCE
             </p>
             <p>
               KMØ 30 rue François Spoerry, 68100 <b>Mulhouse</b>, FRANCE
-            </p>
-            <p>
-              c/o EUREX GE SA - Rue de Genève 18 - 1225 <b>Chêne-Bourg</b>, SWITZERLAND
             </p>
           </div>
           <div className="contact">
