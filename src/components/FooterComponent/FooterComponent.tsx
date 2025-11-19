@@ -67,7 +67,9 @@ export default function FooterComponent() {
         </div>
         <div className="legal">
           <a href="/pressbook.pdf">Press</a>
-          <a href="/legal-notice">Legal notice</a>© {year} Solide Finance SAS. All rights reserved.
+          <a href="/privacy-policy">Privacy policy</a>
+          <a href="/legal-notice">Legal notice</a>
+          <span>© {year} Solide Finance SAS. All rights reserved.</span>
         </div>
       </div>
     </footer>
