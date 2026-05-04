@@ -522,8 +522,8 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           standards.
         </p>
         <p>
-          <a href="https://demo.solide.fi" target="_blank" className="button-like light">
-            Access demo{" "}
+          <a href="mailto:hello@solide.fi" className="button-like light">
+            Contact us{" "}
             <span>
               <NeArrow />
             </span>
@@ -602,8 +602,8 @@ export default function ServicesComponent({ nav }: ServicesComponentProps) {
           secure, compliant, and efficient infrastructure for managing digital assets, leveraged by our REST API.
         </p>
         <p>
-          <a href="https://demo.solide.fi" target="_blank" className="button-like light">
-            Access demo{" "}
+          <a href="mailto:hello@solide.fi" className="button-like light">
+            Contact us{" "}
             <span>
               <NeArrow />
             </span>

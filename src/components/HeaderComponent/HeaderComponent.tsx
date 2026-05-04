@@ -51,8 +51,8 @@ export default function HeaderComponent() {
           </ul>
         </nav>
         <div className="actions">
-          <a href="https://demo.solide.fi" className="button-like">
-            Access demo{" "}
+          <a href="mailto:hello@solide.fi" className="button-like">
+            Contact us{" "}
             <span>
               <NeArrow />
             </span>
@@ -87,8 +87,8 @@ export default function HeaderComponent() {
               </li>
               <li>
                 <hr className="demo-line" />
-                <a href="https://demo.solide.fi" className="button-like" target="_blank">
-                  Access demo{" "}
+                <a href="mailto:hello@solide.fi" className="button-like">
+                  Contact us{" "}
                   <span>
                     <NeArrow />
                   </span>
