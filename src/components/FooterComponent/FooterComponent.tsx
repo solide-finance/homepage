@@ -1,4 +1,7 @@
 import sflogo2 from "../../assets/v2/sflogo.svg";
+import soc2 from "../../assets/v2/soc2.png";
+import iso from "../../assets/v2/iso27001.png";
+
 import "./FooterComponent.scss";
 
 export default function FooterComponent() {
@@ -12,24 +15,35 @@ export default function FooterComponent() {
             <h5>
               <img src={sflogo2} alt="SolideFinance logo" />
             </h5>
-            <p>SolideFinance SAS is incorporated in France under the number 979 290 889 00018.</p>
+            <p>
+              SolideFinance SA is incorporated in Switzerland under the number CHE-140.601.494 and affiliated with
+              SO-FIT, a self-regulatory organization (SRO) officially recognized by FINMA.
+            </p>
+            <p>Solide Finance SAS is incorporated in France under the number 979 290 889 00018.</p>
             <h5></h5>
           </div>
           <div className="addresses">
             <h5>Addresses</h5>
+            <p>
+              c/o EUREX GE SA - Rue de Genève 18 - 1225 <b>Chêne-Bourg</b>, SWITZERLAND
+            </p>
             <p>
               62 rue Jean-Jacques Rousseau, 75001 <b>Paris</b>, FRANCE
             </p>
             <p>
               KMØ 30 rue François Spoerry, 68100 <b>Mulhouse</b>, FRANCE
             </p>
-            <p>
-              c/o EUREX GE SA - Rue de Genève 18 - 1225 <b>Chêne-Bourg</b>, SWITZERLAND
-            </p>
           </div>
           <div className="contact">
             <h5>Contact us</h5>
             <a href="mailto:hello@solide.fi">hello@solide.fi</a>
+          </div>
+          <div className="trust">
+            <h5>Trust</h5>
+            <a href="https://trust.solide.fi">
+              <img src={iso} width={50} alt="ISO 27001" />
+              <img src={soc2} width={50} alt="SOC2 Type 2" />
+            </a>
           </div>
           <div className="social">
             <h5>Follow us</h5>
@@ -52,9 +66,10 @@ export default function FooterComponent() {
           </div>
         </div>
         <div className="legal">
-          <a href="https://solide-finance.kamealabs.com/">Invest</a>
           <a href="/pressbook.pdf">Press</a>
-          <a href="/legal-notice">Legal notice</a>© {year} Solide Finance SAS. All rights reserved.
+          <a href="/privacy-policy">Privacy policy</a>
+          <a href="/legal-notice">Legal notice</a>
+          <span>© {year} Solide Finance SAS. All rights reserved.</span>
         </div>
       </div>
     </footer>

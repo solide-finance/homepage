@@ -16,8 +16,8 @@ export default function HeroComponent({ nav }: HeroComponentProps) {
           offering automated, cost-efficient, and compliant FX infrastructure.
         </p>
         <p>
-          <a href="https://demo.solide.fi" target="_blank" className="button-like">
-            Access demo{" "}
+          <a href="mailto:hello@solide.fi" className="button-like">
+            Contact us{" "}
             <span>
               <NeArrow />
             </span>
