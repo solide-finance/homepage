@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import type { ThemeConfig } from "antd/es/config-provider/context";
 
@@ -15,31 +14,19 @@ const theme: ThemeConfig = {
   }
 };
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "",
-        element: <PortalPage />
-      },
-      {
-        path: "legal-notice",
-        element: <LegalNoticePage />
-      },
-      {
-        path: "privacy-policy",
-        element: <PrivacyPolicyPage />
-      }
-    ]
-  }
-]);
+const pages = {
+  "/": <PortalPage />,
+  "/legal-notice": <LegalNoticePage />,
+  "/privacy-policy": <PrivacyPolicyPage />
+} as const;
+
+const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+const page = pages[normalizedPath as keyof typeof pages] ?? <h1>404 Not Found</h1>;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ConfigProvider theme={theme}>
-      <RouterProvider router={router} />
+      <App>{page}</App>
     </ConfigProvider>
   </React.StrictMode>
 );
