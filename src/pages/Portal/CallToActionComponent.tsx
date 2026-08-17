@@ -1,24 +1,16 @@
-import NeArrow from "../../assets/v2/ne-arrow.svg?react";
+import { contactMailto } from "../../config/site";
 
-import "./CallToActionComponent.scss";
-
-interface CallToActionComponentProps {
-  nav: string;
-}
-
-export default function CallToActionComponent({ nav }: CallToActionComponentProps) {
+export default function CallToActionComponent() {
   return (
-    <div className="call-to-action-component" id={nav}>
-      <div className="component-content">
-        <h2>Are you ready to enter the next generation of FX payments?</h2>
-        <p>Don’t miss out on the future of finance, schedule a demo with us today to explore our solution.</p>
-        <a href="mailto:hello@solide.fi" className="button-like">
-          Schedule a demo{" "}
-          <span>
-            <NeArrow />
-          </span>
+    <section className="final-cta">
+      <div className="section-shell">
+        <p className="eyebrow">Start a conversation</p>
+        <h2>Discuss your corridors and use cases with our team</h2>
+        <p>Our team works with banks, payment providers and asset managers across Europe, Switzerland and beyond.</p>
+        <a href={contactMailto()} className="button-like light">
+          Contact our team <span aria-hidden="true">→</span>
         </a>
       </div>
-    </div>
+    </section>
   );
 }

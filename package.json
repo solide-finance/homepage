@@ -5,28 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/prerender.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier-check": "prettier src --check",
     "prettier-write": "prettier src --write"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.0.18",
     "@fontsource/roboto": "^5.2.5",
-    "antd": "^5.24.6",
-    "classnames": "^2.5.1",
-    "framer-motion": "^12.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-slick": "^0.30.3",
-    "sass": "^1.77.4",
-    "slick-carousel": "^1.8.1"
+    "sass": "^1.77.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.7.0",

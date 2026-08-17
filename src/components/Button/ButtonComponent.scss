@@ -4,18 +4,19 @@
   display: inline-flex;
   align-items: center;
   margin: 0;
-  padding: 1rem;
+  padding: 1.2rem 1.6rem;
 
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
 
   text-decoration: none;
   color: white;
 
   > span {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 1rem;
-    width: 0.8em;
-    height: 0.8em;
+    line-height: 1;
   }
 
   &:not(.light) {
