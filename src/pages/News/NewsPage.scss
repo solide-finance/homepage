@@ -1,0 +1,54 @@
+@import "../../utils/variables.scss";
+
+.news-list {
+  border-top: 1px solid $border-color;
+
+  article {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.4fr) 1.6fr;
+    gap: 5rem;
+    padding: 5rem 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h2 {
+    max-width: 78rem;
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+  }
+
+  p {
+    max-width: 78rem;
+    color: $text-muted;
+    font-size: 1.8rem;
+  }
+}
+
+.news-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: $text-muted;
+
+  span {
+    color: $blue-dark;
+    font-weight: 700;
+  }
+}
+
+.press-contact {
+  margin-top: 7rem;
+  padding: clamp(3rem, 6vw, 6rem);
+  border-radius: $radius;
+  background: $gray-light;
+
+  h2 {
+    font-size: clamp(3rem, 4vw, 4.2rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .news-list article {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

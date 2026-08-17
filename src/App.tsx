@@ -1,21 +1,18 @@
-import "@fontsource/inter";
-import "@fontsource/roboto";
-
 import type { ReactNode } from "react";
 
-import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
+import EventBanner from "./components/EventBanner/EventBanner";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
+import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
 
 import "./App.scss";
 
-function App({ children }: { children: ReactNode }) {
+export default function App({ children }: { children: ReactNode }) {
   return (
     <div className="App">
+      <EventBanner />
       <HeaderComponent />
       <main>{children}</main>
       <FooterComponent />
     </div>
   );
 }
-
-export default App;

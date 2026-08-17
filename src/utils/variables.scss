@@ -1,6 +1,15 @@
 $blue-dark: #0a283c;
-$very-blue-dark: #0a283c99;
-$gray-light: #0a283c08;
+$blue: #155b79;
+$teal: #28a5a3;
+$gray-light: #f4f7f8;
 $very-light-gray: #cbcbcb;
+$text-muted: #4c6473;
+$border-color: #d9e2e7;
 
+$content-max-width: 1280px;
+$narrow-max-width: 760px;
+$section-spacing: clamp(7rem, 10vw, 13rem);
+$header-height: 8rem;
+$radius: 2rem;
+$radius-small: 0.8rem;
 $mobile-width-breakpoint: 1024px;

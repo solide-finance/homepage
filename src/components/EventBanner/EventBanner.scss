@@ -1,0 +1,23 @@
+@import "../../utils/variables.scss";
+
+.event-banner {
+  position: relative;
+  z-index: 4;
+  padding: 0.9rem 2rem;
+  background: $blue-dark;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: #9ee2df;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+}

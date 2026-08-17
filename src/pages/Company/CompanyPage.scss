@@ -1,0 +1,100 @@
+@import "../../utils/variables.scss";
+
+.company-page > h1 {
+  max-width: 90rem;
+}
+
+.people-section,
+.company-offices {
+  padding: 6rem 0;
+  border-top: 1px solid $border-color;
+
+  > h2 {
+    margin-bottom: 4rem;
+    font-size: clamp(3rem, 4vw, 4.2rem);
+  }
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  article {
+    min-height: 19rem;
+    padding: 2.5rem;
+    border-radius: $radius;
+    background: $gray-light;
+  }
+
+  h3 {
+    margin-top: 4rem;
+    font-size: 2.4rem;
+  }
+
+  p {
+    color: $text-muted;
+  }
+}
+
+.person-rule {
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background: $teal;
+}
+
+.company-offices__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  p {
+    color: $text-muted;
+    font-size: 1.4rem;
+  }
+}
+
+.company-cta {
+  margin-top: 5rem;
+  padding: clamp(3rem, 6vw, 6rem);
+  border-radius: $radius;
+  background: $blue-dark;
+  color: white;
+
+  h2 {
+    max-width: 75rem;
+    color: white;
+  }
+
+  .button-like {
+    border-color: white;
+    background: white;
+    color: $blue-dark;
+  }
+}
+
+@media (hover: hover) {
+  .company-cta .button-like:hover {
+    border-color: #9ee2df;
+    background: #9ee2df;
+    color: $blue-dark;
+  }
+}
+
+@media (max-width: $mobile-width-breakpoint) {
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-offices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .people-grid,
+  .company-offices__grid {
+    grid-template-columns: 1fr;
+  }
+}

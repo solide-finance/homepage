@@ -1,199 +1,150 @@
-@use "../Button/ButtonComponent.scss";
 @import "../../utils/variables.scss";
 
-.header-component {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
+.site-header {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(1.2rem);
 
   &.is-scrolled {
-    background: white;
+    border-color: $border-color;
+  }
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: min(100% - 4rem, $content-max-width);
+  min-height: $header-height;
+  margin: 0 auto;
+}
+
+.brand {
+  flex: 0 0 auto;
+
+  a,
+  img {
+    display: block;
   }
 
-  h1 {
-    margin: 0;
-    padding: 0;
-
-    font-family: "Inter";
-    letter-spacing: 0.2rem;
-    font-weight: 300;
-
-    a {
-      text-decoration: none;
-    }
+  img {
+    width: clamp(17rem, 17vw, 22rem);
+    height: auto;
   }
 
-  h1 a {
+  a {
+    transition: opacity 160ms ease;
+  }
+}
+
+.desktop-navigation {
+  margin-left: auto;
+
+  ul {
     display: flex;
     align-items: center;
-  }
-
-  nav ul {
-    display: flex;
-
+    gap: clamp(1.2rem, 1.8vw, 2.8rem);
     margin: 0;
     padding: 0;
-
-    list-style-type: none;
+    list-style: none;
   }
 
-  nav li a {
-    text-decoration: none;
-    font-size: 1.8rem;
-
+  a {
     color: $blue-dark;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    font-size: 1.45rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
   }
 
-  .actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    a {
-      margin-left: 1em;
-    }
-  }
-
-  a.button-like {
-    @include ButtonComponent.button-base();
+  a:hover {
+    color: $blue;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
   }
 }
 
-@media (min-width: calc($mobile-width-breakpoint)) {
-  .header-component.mobile {
-    display: none;
-  }
-
-  .header-component.desktop {
-    padding: 4rem;
-
-    nav li {
-      margin: 0 1rem;
-    }
-
-    img {
-      width: 24rem;
-    }
-
-    h1 {
-      font-size: 3.6rem;
-    }
-  }
+.header-cta {
+  flex: 0 0 auto;
+  font-size: 1.45rem;
+  white-space: nowrap;
 }
 
-@media (max-width: calc($mobile-width-breakpoint - 1px)) {
-  .header-component.desktop {
+.menu-button,
+.mobile-navigation {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .desktop-navigation,
+  .header-cta.button-like {
     display: none;
   }
-  .demo-line {
-    margin: 3rem 0;
-    border: none;
-    height: 1px;
-    background-color: $very-light-gray;
 
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+  .menu-button {
+    display: inline-grid;
+    place-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    margin-left: auto;
+    border: 1px solid $border-color;
+    border-radius: $radius-small;
+    background: white;
+    color: $blue-dark;
+    font: inherit;
+    font-size: 2.2rem;
+    cursor: pointer;
   }
 
-  .header-component {
-    .header-content {
-      margin: 0 4rem;
-    }
-  }
+  .mobile-navigation {
+    display: block;
+    padding: 1rem 2rem 2.4rem;
+    border-top: 1px solid $border-color;
+    background: white;
 
-  .header-component.mobile {
-    padding: 2rem;
-
-    ::marker,
-    ::-webkit-details-marker {
+    &[hidden] {
       display: none;
     }
 
-    img {
-      width: 22rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-    }
-
-    nav ul {
-      align-items: center;
-      flex-direction: column;
-      margin: 6rem;
-    }
-
-    nav li {
-      margin: 3rem 0;
-    }
-
-    nav .actions {
-      flex-direction: column;
-      justify-content: flex-end;
-
-      margin-top: 2rem;
-
-      font-size: 2.4rem;
-
-      a {
-        width: 50%;
-        flex: 1;
-        justify-content: space-between;
-
-        margin-bottom: 1rem;
-      }
-
-      span {
-        font-size: 2.4rem;
-      }
-    }
-
-    details {
-      flex: 1;
-
-      .expanded-indicator {
-        font-size: 2.9rem;
-        &::before {
-          // the ☰ looks off without this ugly hack
-          margin-top: -0.3rem;
-
-          content: "\2630";
-        }
-      }
-
-      &[open] .expanded-indicator {
-        &::before {
-          margin-top: 0rem;
-
-          content: "\2715";
-        }
-      }
-    }
-
-    summary {
+    ul {
+      display: grid;
+      gap: 0;
+      margin: 0 0 1.6rem;
+      padding: 0;
       list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 4rem;
     }
 
-    summary .expanded-indicator {
-      display: flex;
-      margin-left: auto;
+    li + li {
+      border-top: 1px solid $border-color;
     }
+
+    li a {
+      display: block;
+      padding: 1.3rem 0;
+      color: $blue-dark;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .brand a:hover {
+    opacity: 0.72;
+  }
+
+  .menu-button:hover {
+    border-color: $blue;
+    background: $gray-light;
+    color: $blue;
+  }
+
+  .mobile-navigation li a:hover {
+    color: $blue;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
   }
 }

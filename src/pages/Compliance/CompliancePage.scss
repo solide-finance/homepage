@@ -1,0 +1,51 @@
+@import "../../utils/variables.scss";
+
+.compliance-page > h1 {
+  max-width: 90rem;
+}
+
+.compliance-sections {
+  border-top: 1px solid $border-color;
+
+  section {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 3rem;
+    padding: 5rem 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  section > span {
+    color: $teal;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(2.6rem, 4vw, 4rem);
+  }
+
+  p {
+    max-width: 80rem;
+    color: $text-muted;
+    font-size: 1.8rem;
+  }
+}
+
+.compliance-cta {
+  margin-top: 7rem;
+  padding: clamp(3rem, 6vw, 6rem);
+  border-radius: $radius;
+  background: $gray-light;
+
+  h2 {
+    max-width: 75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .compliance-sections section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

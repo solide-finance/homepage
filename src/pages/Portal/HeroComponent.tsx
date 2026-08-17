@@ -1,29 +1,17 @@
-import "./HeroComponent.scss";
-
-import NeArrow from "../../assets/v2/ne-arrow.svg?react";
-
-interface HeroComponentProps {
-  nav: string;
-}
-
-export default function HeroComponent({ nav }: HeroComponentProps) {
+export default function HeroComponent() {
   return (
-    <div className="hero-component" id={nav}>
-      <div className="hero-content">
-        <h2>Unlock the power of Blockchain-Powered FX for Financial Institutions</h2>
-        <p>
-          Welcome to SolideFinance, where we bridge the gap between traditional finance and decentralized technology -
-          offering automated, cost-efficient, and compliant FX infrastructure.
+    <section className="hero" id="top">
+      <div className="hero__content">
+        <p className="eyebrow">Infrastructure for financial institutions</p>
+        <h1>Regulated on-chain payment and FX infrastructure for financial institutions.</h1>
+        <p className="hero__intro">
+          SolideFinance modernises FX payment rails. Banks offer their corporate clients faster, more transparent
+          cross-border payments — under their own brand, within their own regulated perimeter.
         </p>
-        <p>
-          <a href="mailto:hello@solide.fi" className="button-like">
-            Contact us{" "}
-            <span>
-              <NeArrow />
-            </span>
-          </a>
-        </p>
+        <a href="/contact" className="button-like">
+          Contact our team <span aria-hidden="true">→</span>
+        </a>
       </div>
-    </div>
+    </section>
   );
 }
