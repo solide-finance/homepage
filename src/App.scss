@@ -52,10 +52,22 @@ textarea {
 }
 
 .App {
+  --top-bar-height: #{$header-height};
+
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   font-size: 1.6rem;
+
+  &.has-event-banner {
+    --top-bar-height: calc(#{$header-height} + #{$event-banner-height});
+  }
+}
+
+.site-top {
+  position: sticky;
+  top: 0;
+  z-index: 4;
 }
 
 main {
@@ -104,7 +116,7 @@ svg {
 
 section[id],
 [id="top"] {
-  scroll-margin-top: calc($header-height + 2rem);
+  scroll-margin-top: calc(var(--top-bar-height) + 2rem);
 }
 
 .section-shell,
@@ -156,9 +168,16 @@ button:disabled {
 }
 
 .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   color: $blue-dark;
   font-weight: 700;
   text-underline-offset: 0.35rem;
+
+  > span {
+    line-height: 1;
+  }
 }
 
 @media (hover: hover) {
@@ -180,7 +199,6 @@ button:disabled {
   }
 
   .text-link:hover span {
-    display: inline-block;
     transform: translateX(0.3rem);
   }
 }

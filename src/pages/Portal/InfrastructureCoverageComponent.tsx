@@ -5,7 +5,7 @@ export default function InfrastructureCoverageComponent() {
     <section className="infrastructure-section">
       <div className="section-shell">
         <p className="eyebrow">Infrastructure & coverage</p>
-        <h2>Four proprietary components, one integration.</h2>
+        <h2>Four proprietary components, one integration</h2>
         <div className="infrastructure-grid">
           {infrastructureComponents.map((component) => (
             <article key={component.title}>
@@ -22,10 +22,6 @@ export default function InfrastructureCoverageComponent() {
           <div>
             <span>Settlement currencies</span>
             <strong>60+</strong>
-          </div>
-          <div>
-            <span>Liquidity families</span>
-            <strong>G10 · liquid non-G10 · frontier markets · prior-review corridors</strong>
           </div>
         </div>
       </div>

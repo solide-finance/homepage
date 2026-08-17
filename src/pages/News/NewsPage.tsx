@@ -19,14 +19,23 @@ export default function NewsPage() {
 
       <div className="news-list">
         {newsEntries.map((entry) => (
-          <article key={entry.title}>
-            <div className="news-meta">
-              <span>{entry.source}</span>
-              <time>{entry.date}</time>
+          <article key={entry.link}>
+            <div className="news-publisher">
+              <div className="news-logo">
+                <img src={entry.logo} alt={`${entry.source} logo`} />
+              </div>
+              <div className="news-meta">
+                <span>{entry.source}</span>
+                <time>{entry.date}</time>
+              </div>
             </div>
-            <div>
+            <div className="news-content">
               <h2>{entry.title}</h2>
               <p>{entry.summary}</p>
+              <a className="text-link news-read-link" href={entry.link} target="_blank" rel="noreferrer">
+                Read on {entry.source} <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </div>
           </article>
         ))}

@@ -1,9 +1,9 @@
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "vite";
 
-const projectRoot = resolve(import.meta.dirname, "..");
+const projectRoot = resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
 const distDirectory = resolve(projectRoot, "dist");
 const serverBuildDirectory = resolve(projectRoot, ".prerender");
 const template = await readFile(resolve(distDirectory, "index.html"), "utf8");

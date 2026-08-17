@@ -37,7 +37,7 @@ export default function CompliancePage() {
       </div>
 
       <section className="compliance-cta">
-        <h2>Discuss your due-diligence requirements with our team.</h2>
+        <h2>Discuss your due-diligence requirements with our team</h2>
         <a href="/contact" className="button-like">
           Contact our team <span aria-hidden="true">→</span>
         </a>

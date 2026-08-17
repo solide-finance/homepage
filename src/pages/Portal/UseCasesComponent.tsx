@@ -4,7 +4,7 @@ export default function UseCasesComponent() {
   return (
     <section className="section-shell use-cases" id="use-cases">
       <p className="eyebrow">Use cases</p>
-      <h2>One payment and FX layer across institutional workflows.</h2>
+      <h2>One payment and FX layer across institutional workflows</h2>
       <div className="use-cases__grid">
         {useCases.map((useCase, index) => (
           <article className="content-card" key={useCase.title}>

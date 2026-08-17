@@ -109,42 +109,160 @@
   padding: 4rem;
   border: 1px solid $border-color;
   border-radius: $radius;
+  background: linear-gradient(180deg, white, rgba(40, 165, 163, 0.05));
+}
+
+.payment-flow__steps {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.9fr 0.8fr 1fr;
+  align-items: stretch;
+  gap: 3rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-flow__step {
+  position: relative;
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.4rem 2rem;
+  border: 1px solid $border-color;
+  border-radius: $radius-small;
   background: white;
+  text-align: center;
 
-  ol {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 1.8fr 0.8fr 1fr;
-    gap: 3rem;
-    margin: 3rem 0 0;
-    padding: 0;
-    list-style: none;
+  strong {
+    font-size: 1.6rem;
+    line-height: 1.35;
   }
 
-  li {
-    position: relative;
-    display: flex;
-    min-height: 10rem;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    border-radius: $radius-small;
-    background: $gray-light;
-    text-align: center;
-  }
-
-  li:not(:last-child)::after {
+  &:not(:last-child)::after {
     position: absolute;
     top: 50%;
-    left: calc(100% + 0.8rem);
-    color: $blue;
+    left: calc(100% + 0.9rem);
+    color: $teal;
+    font-size: 1.6rem;
     content: "→";
     transform: translateY(-50%);
   }
+}
 
-  span {
-    margin-top: 0.8rem;
-    color: $text-muted;
-    font-size: 1.2rem;
+.payment-flow__index {
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border-radius: 50%;
+  background: $blue-dark;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transform: translateX(-50%);
+}
+
+.payment-flow__detail {
+  margin-top: 0.8rem;
+  color: $text-muted;
+  font-size: 1.2rem;
+}
+
+.payment-flow__note {
+  margin-top: 1rem;
+  color: $blue;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.payment-flow__step--bank {
+  border-color: rgba(21, 91, 121, 0.35);
+  box-shadow: inset 0 3px 0 $blue;
+}
+
+.payment-flow__step--ramp {
+  background: $gray-light;
+
+  strong {
+    font-size: 1.4rem;
+  }
+}
+
+.payment-flow__step--core {
+  border-color: $blue-dark;
+  background: $blue-dark;
+  color: white;
+
+  .payment-flow__index {
+    background: $teal;
+  }
+
+  strong {
+    font-size: 1.8rem;
+  }
+
+  .payment-flow__detail {
+    color: #9ee2df;
+  }
+}
+
+.payment-flow__parts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, auto));
+  gap: 0.8rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-column: span 2;
+    place-items: center;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: $radius-small;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  li:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+}
+
+.payment-flow__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    background: white;
+    color: $blue-dark;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  li::before {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: $teal;
+    content: "";
   }
 }
 
@@ -213,6 +331,7 @@
 .trust-row {
   display: grid;
   grid-template-columns: minmax(18rem, 0.5fr) 2fr;
+  align-items: center;
   gap: 4rem;
   padding: 3rem 0;
   border-top: 1px solid $border-color;
@@ -225,7 +344,7 @@
 .trust-row__items {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -234,12 +353,14 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  min-height: 6rem;
+  min-height: 7.2rem;
   padding: 1rem 1.5rem;
   border: 1px solid $border-color;
   border-radius: $radius-small;
+  color: inherit;
   font-size: 1.4rem;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .logo-item img {
@@ -274,6 +395,11 @@
   .trust-row__items a:hover {
     color: $blue;
   }
+
+  a.logo-item:hover,
+  a.text-badge:hover {
+    border-color: $teal;
+  }
 }
 
 .team-strip__grid {
@@ -282,19 +408,26 @@
   gap: 2rem;
   margin: 5rem 0 4rem;
 
-  article {
+  .person-card {
     min-height: 16rem;
-    padding: 2.4rem;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: $radius;
   }
 
   h3 {
     color: white;
   }
 
-  p {
-    color: rgba(255, 255, 255, 0.75);
+  .person-card__role,
+  .person-card__bio {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .person-card__photo--initials {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .person-card__linkedin {
+    color: white;
   }
 }
 
@@ -344,12 +477,13 @@
     grid-template-columns: 1fr;
   }
 
-  .payment-flow ol {
+  .payment-flow__steps {
     grid-template-columns: 1fr;
+    gap: 3.4rem;
   }
 
-  .payment-flow li:not(:last-child)::after {
-    top: calc(100% + 0.2rem);
+  .payment-flow__step:not(:last-child)::after {
+    top: calc(100% + 0.4rem);
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
   }
@@ -383,6 +517,15 @@
 
   .payment-flow {
     padding: 2.2rem;
+  }
+
+  .payment-flow__parts {
+    gap: 0.6rem;
+
+    li {
+      padding: 0.8rem 0.6rem;
+      font-size: 1.15rem;
+    }
   }
 
   .trust-row {

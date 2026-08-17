@@ -1,12 +1,20 @@
 import { FormEvent, useEffect, useState } from "react";
 
 import Seo from "../../components/Seo/Seo";
-import { BOOKING_URL, CONTACT_EMAIL, CONTACT_FORM_ENDPOINT } from "../../config/site";
+import { BOOKING_URL, CONTACT_EMAIL } from "../../config/site";
 import { offices } from "../../content/siteContent";
 
 import "./ContactPage.scss";
 
-type Subject = "partnership" | "pilot_product" | "press" | "investor_relations" | "other";
+const subjectLabels = {
+  partnership: "Partnership",
+  pilot_product: "Pilot & product enquiry",
+  press: "Press",
+  investor_relations: "Investor relations",
+  other: "Other"
+} as const;
+
+type Subject = keyof typeof subjectLabels;
 
 type FormData = {
   firstName: string;
@@ -33,7 +41,7 @@ const initialForm: FormData = {
 export default function ContactPage() {
   const [form, setForm] = useState<FormData>(initialForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success">("idle");
   const [statusMessage, setStatusMessage] = useState("");
 
   useEffect(() => {
@@ -64,9 +72,9 @@ export default function ContactPage() {
     return Object.keys(nextErrors).length === 0;
   }
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (status === "submitting" || !validate()) return;
+    if (!validate()) return;
 
     if (form.website) {
       setStatus("success");
@@ -74,41 +82,25 @@ export default function ContactPage() {
       return;
     }
 
-    if (!CONTACT_FORM_ENDPOINT) {
-      setStatus("error");
-      setStatusMessage(
-        `Online submissions are temporarily unavailable. Please email ${CONTACT_EMAIL} and our team will respond.`
-      );
-      return;
-    }
+    const subject = `${subjectLabels[form.subject]} — ${form.institution.trim()}`;
+    const body = [
+      `Name: ${form.firstName.trim()} ${form.lastName.trim()}`,
+      `Business email: ${form.email.trim()}`,
+      `Institution: ${form.institution.trim()}`,
+      `Subject: ${subjectLabels[form.subject]}`,
+      form.sibos ? "Would like to meet the team at Sibos, Miami (28 September – 1 October)." : "",
+      "",
+      form.message.trim()
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-    setStatus("submitting");
-    setStatusMessage("Sending your enquiry…");
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    try {
-      const response = await fetch(CONTACT_FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName: form.firstName.trim(),
-          lastName: form.lastName.trim(),
-          email: form.email.trim(),
-          institution: form.institution.trim(),
-          subject: form.subject,
-          message: form.message.trim(),
-          sibos: form.sibos
-        })
-      });
-
-      if (!response.ok) throw new Error("Submission failed");
-      setStatus("success");
-      setStatusMessage(
-        "Thank you. Your enquiry has been received. Our team will be in touch within two business days."
-      );
-    } catch {
-      setStatus("error");
-      setStatusMessage("We could not send your enquiry. Please try again or contact us by email.");
-    }
+    setStatus("success");
+    setStatusMessage(
+      `Your email client is opening with this enquiry prefilled. If nothing opens, email us at ${CONTACT_EMAIL}.`
+    );
   }
 
   return (
@@ -201,11 +193,11 @@ export default function ContactPage() {
               onChange={(event) => update("subject", event.target.value as Subject)}
               required
             >
-              <option value="partnership">Partnership</option>
-              <option value="pilot_product">Pilot & product enquiry</option>
-              <option value="press">Press</option>
-              <option value="investor_relations">Investor relations</option>
-              <option value="other">Other</option>
+              {Object.entries(subjectLabels).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
             </select>
           </FormField>
 
@@ -237,8 +229,8 @@ export default function ContactPage() {
           </label>
 
           <div className="form-actions">
-            <button className="button-like" type="submit" disabled={status === "submitting"}>
-              {status === "submitting" ? "Sending…" : "Send enquiry"} <span aria-hidden="true">→</span>
+            <button className="button-like" type="submit">
+              Send enquiry <span aria-hidden="true">→</span>
             </button>
             <p>
               By submitting, you acknowledge our <a href="/privacy-policy">privacy policy</a>.

@@ -1,3 +1,4 @@
+import PersonCard from "../../components/PersonCard/PersonCard";
 import Seo from "../../components/Seo/Seo";
 import { boardMembers, compliancePeople, leadership, offices } from "../../content/siteContent";
 
@@ -14,12 +15,7 @@ function PeopleSection({ title, people }: PeopleSectionProps) {
       <h2>{title}</h2>
       <div className="people-grid">
         {people.map((person) => (
-          <article key={person.name}>
-            <div className="person-rule" aria-hidden="true" />
-            <h3>{person.name}</h3>
-            <p>{person.role}</p>
-            {person.bio && <p>{person.bio}</p>}
-          </article>
+          <PersonCard key={person.name} person={person} />
         ))}
       </div>
     </section>
@@ -58,7 +54,7 @@ export default function CompanyPage() {
       </section>
 
       <section className="company-cta">
-        <h2>Talk to the people building the infrastructure.</h2>
+        <h2>Talk to the people building the infrastructure</h2>
         <a className="button-like" href="/contact">
           Contact our team <span aria-hidden="true">→</span>
         </a>

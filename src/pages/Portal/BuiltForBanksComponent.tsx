@@ -4,7 +4,7 @@ export default function BuiltForBanksComponent() {
   return (
     <section className="section-shell built-for-banks">
       <p className="eyebrow">Built for banks</p>
-      <h2>Infrastructure that strengthens the institution’s position.</h2>
+      <h2>Infrastructure that strengthens the institution’s position</h2>
       <div className="card-grid">
         {builtForBanks.map((item) => (
           <article className="content-card" key={item.title}>

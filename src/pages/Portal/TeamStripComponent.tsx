@@ -1,3 +1,4 @@
+import PersonCard from "../../components/PersonCard/PersonCard";
 import { teamStrip } from "../../content/siteContent";
 
 export default function TeamStripComponent() {
@@ -5,13 +6,10 @@ export default function TeamStripComponent() {
     <section className="team-strip">
       <div className="section-shell">
         <p className="eyebrow">Team</p>
-        <h2>Built by payment and banking specialists.</h2>
+        <h2>Built by payment and banking specialists</h2>
         <div className="team-strip__grid">
           {teamStrip.map((person) => (
-            <article key={person.name}>
-              <h3>{person.name}</h3>
-              <p>{person.role}</p>
-            </article>
+            <PersonCard key={person.name} person={person} />
           ))}
         </div>
         <a className="text-link" href="/company">

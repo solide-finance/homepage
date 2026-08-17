@@ -1,4 +1,11 @@
 import { DEVELOPER_DOCS_URL } from "../config/site";
+import agefiLogo from "../assets/news/agefi.png";
+import allnewsLogo from "../assets/news/allnews.png";
+import ggbaLogo from "../assets/news/ggba.png";
+import investirLogo from "../assets/news/investir.jpg";
+import jaimeLesStartupsLogo from "../assets/news/jaime-les-startups.png";
+import lesEchosLogo from "../assets/news/les-echos.jpg";
+import planetFintechLogo from "../assets/news/planet-fintech.png";
 
 export type NavLink = {
   label: string;
@@ -15,6 +22,7 @@ export type Person = {
   name: string;
   role: string;
   bio?: string;
+  linkedin?: string;
 };
 
 export const navLinks: NavLink[] = [
@@ -30,11 +38,11 @@ export const offices = [
   { city: "Mulhouse", address: "KMØ, 30 rue François Spoerry, 68100 Mulhouse, France" },
   { city: "Paris", address: "62 rue Jean-Jacques Rousseau, 75001 Paris, France" },
   { city: "Geneva", address: "c/o EUREX GE SA, Rue de Genève 18, 1225 Chêne-Bourg, Switzerland" },
-  { city: "Zurich" }
+  { city: "Zurich", address: "Opening Q4 2026" }
 ];
 
 export const homepageProofs = [
-  "Financial intermediary affiliated with SO-FIT, an SRO recognised by FINMA",
+  "Financial Intermediary Affiliated Under Swiss SRO",
   "ISO 27001 certified",
   "SOC 2 assurance",
   "60+ settlement currencies"
@@ -42,30 +50,30 @@ export const homepageProofs = [
 
 export const builtForBanks: ContentCard[] = [
   {
-    title: "Serving institutions, not competing with them.",
+    title: "Serving institutions",
     body: "SolideFinance equips banks and financial institutions to operate digital-asset-based payments for their own clients. The institution keeps the client relationship, FX volumes and revenue."
   },
   {
-    title: "Optimized FX and cross-border flows.",
+    title: "Optimized FX and cross-border flows",
     body: "Bank-to-bank settlement without nostro/vostro accounts, pre-funded liquidity or intermediary chains. Atomic conversion and delivery are designed to minimise settlement risk."
   },
   {
-    title: "Inside the regulated perimeter.",
+    title: "Inside the regulated perimeter",
     body: "Swiss AML supervision, pre-transaction screening, traceability and segregated funds: infrastructure designed to the standards financial institutions apply to themselves."
   }
 ];
 
 export const designPrinciples: ContentCard[] = [
   {
-    title: "Account-to-account, within the existing payment chain.",
+    title: "Account-to-account, within the existing payment chain",
     body: "Funds move from the issuing bank to the beneficiary bank through familiar account-based payment journeys, while SolideFinance coordinates the underlying conversion and settlement."
   },
   {
-    title: "A technology layer invisible to the end client.",
+    title: "A technology layer invisible to the end client",
     body: "The financial institution remains the client-facing provider. Its corporate clients do not need a wallet, exchange account or a new operational workflow."
   },
   {
-    title: "Compliance by design.",
+    title: "Compliance by design",
     body: "Screening, traceability and controls are embedded before execution so institutions can operate within their own governance and regulated perimeter."
   }
 ];
@@ -77,23 +85,19 @@ export const useCases: ContentCard[] = [
   },
   {
     title: "Stablecoin FX for transaction banking",
-    body: "Offer corporate clients stablecoin-based cross-border payments under the bank’s own brand and within its own perimeter, without requiring the client to use a wallet or exchange account."
+    body: "Offer corporate clients stablecoin-based cross-border payments under the bank’s own brand and within its own perimeter — with no wallet, no exchange account and no change of habits for the client."
   },
   {
     title: "On-chain FX marketplace for institutions",
-    body: "Execute fiat and digital-asset FX with atomic conversion and delivery, including ledger-to-ledger interbank flows through one institutional access layer."
-  },
-  {
-    title: "Group treasury & intra-group netting",
-    body: "Consolidate multi-currency positions and net inter-entity obligations in real time, with instant settlement."
+    body: "Execute FX directly on-chain, across fiat currencies and digital assets, at the mid-market price with no spread. Atomic execution removes settlement risk between counterparties, and the same FX layer applies to ledger-to-ledger interbank transactions."
   },
   {
     title: "Tokenised deposits",
-    body: "Use an FX and settlement layer for regulated tokenised money, supporting tokenised deposits alongside stablecoins."
+    body: "An FX and settlement layer for regulated tokenised money. The infrastructure is designed to handle tokenised deposits alongside stablecoins, giving banks a single execution layer as institutional money moves on-chain."
   },
   {
     title: "Asset managers and trading desks",
-    body: "Support instant FX settlement and Payment versus Delivery, continuously adjustable share-class hedging, and an FX layer for tokenisation platforms."
+    body: "Instant FX settlement and Payment versus Delivery, continuously adjustable share-class hedging, and an FX layer for tokenisation platforms."
   }
 ];
 
@@ -117,16 +121,42 @@ export const infrastructureComponents: ContentCard[] = [
 ];
 
 export const leadership: Person[] = [
-  { name: "Myriame Honnay", role: "CEO & co-founder" },
-  { name: "Olivier Scherrer", role: "CTO & co-founder" },
-  { name: "Vincent Litt", role: "Head of Strategic Partnerships & Institutional Sales" }
+  {
+    name: "Myriame Honnay",
+    role: "CEO & co-founder",
+    linkedin: "https://www.linkedin.com/in/myriame-honnay-5505ba60/"
+  },
+  {
+    name: "Olivier Scherrer",
+    role: "CTO & co-founder",
+    linkedin: "https://www.linkedin.com/in/olivier-scherrer-039b8441/"
+  },
+  {
+    name: "Vincent Litt",
+    role: "Head of Strategic Partnerships & Institutional Sales",
+    linkedin: "https://www.linkedin.com/in/vincentlitt/"
+  }
 ];
 
-export const compliancePeople: Person[] = [{ name: "Fiona Lang", role: "Compliance & AML Officer" }];
+export const compliancePeople: Person[] = [
+  {
+    name: "Fiona Lang",
+    role: "Compliance & AML Officer",
+    linkedin: "https://www.linkedin.com/in/fiona-lang-01996/"
+  }
+];
 
 export const boardMembers: Person[] = [
-  { name: "Vincent Pignon", role: "Director" },
-  { name: "Michael Berclaz", role: "Director" }
+  {
+    name: "Vincent Pignon",
+    role: "Director",
+    linkedin: "https://www.linkedin.com/in/vincent-pignon/"
+  },
+  {
+    name: "Michael Berclaz",
+    role: "Director",
+    linkedin: "https://www.linkedin.com/in/michaelberclaz/"
+  }
 ];
 
 export const teamStrip = [...leadership, ...compliancePeople];
@@ -160,18 +190,86 @@ export const complianceSections: ContentCard[] = [
 
 export const newsEntries = [
   {
-    source: "L’Agefi",
-    date: "2025",
-    title: "Solide Finance met les stablecoins au service des paiements transfrontaliers",
+    logo: allnewsLogo,
+    source: "Allnews",
+    date: "26 February 2026",
+    title: "SolideFinance joins the Wecan network",
     summary:
-      "Coverage of SolideFinance’s use of stablecoin infrastructure to improve cross-border payment and foreign-exchange flows for financial institutions."
+      "Coverage of SolideFinance joining the Wecan network to digitize client onboarding, structure and secure compliance data collection, improve regulatory traceability, and facilitate connections with Swiss banks and independent asset managers.",
+    link: "https://www.allnews.ch/content/corporate/solidefinance-rejoint-le-r%C3%A9seau-wecan"
   },
   {
-    source: "BNP Paribas roundtable",
-    date: "30 June 2026",
-    title: "Payment rails disruption and the new blockchain rails",
+    logo: agefiLogo,
+    source: "L’Agefi",
+    date: "26 February 2026",
+    title: "SolideFinance joins the Wecan network",
     summary:
-      "Myriame Honnay joined Swift and Visa at DeFi & Blockchain 2026, hosted by BNP Paribas at BivwAk!, to discuss the evolution of payment rails."
+      "Coverage of SolideFinance integrating Wecan’s compliance and onboarding infrastructure to strengthen, secure and trace its client onboarding and regulatory monitoring processes.",
+    link: "https://agefi.com/actualites/entreprises/solidefinance-integre-le-reseau-wecan"
+  },
+  {
+    logo: investirLogo,
+    source: "Investir",
+    date: "24 January 2026",
+    title: "Stablecoins: a genuine substitute for traditional systems",
+    summary:
+      "An examination of stablecoins as an alternative to traditional international-transfer systems, featuring Myriame Honnay on how blockchain infrastructure can give banks greater speed, transparency and compliance in cross-border payments.",
+    link: "https://drive.google.com/file/d/1RZ3NfsgiTfyFZVf1BTaEL6fZfjcbJpb2/view"
+  },
+  {
+    logo: agefiLogo,
+    source: "L’Agefi",
+    date: "21 November 2025",
+    title: "L’Agefi Corporate Finance - November 2025",
+    summary:
+      "A special corporate-finance issue for treasurers and finance professionals examining financing, cash management, risk and technological transformation, including the growing role of stablecoins and instant payments.",
+    link: "https://www.agefi.fr/cash-risk/hors-serie/lagefi-finance-dentreprise-novembre-2025"
+  },
+  {
+    logo: ggbaLogo,
+    source: "GGBA",
+    date: "5 November 2025",
+    title: "Solide Finance expands to Geneva to revolutionize cross-border payments",
+    summary:
+      "Coverage of SolideFinance establishing operations in Geneva as a strategic base for its cross-border payment infrastructure, highlighting its use of blockchain and stablecoins, collaboration with local banks, and support from GGBA and Geneva’s economic development authorities.",
+    link: "https://ggba.swiss/fr/solide-finance-simplante-a-geneve-pour-revolutionner-les-paiements-transfrontaliers/"
+  },
+  {
+    logo: agefiLogo,
+    source: "L’Agefi",
+    date: "26 October 2025",
+    title: "Solide Finance puts stablecoins to work for cross-border payments",
+    summary:
+      "A profile of SolideFinance’s blockchain-based infrastructure for financial institutions, explaining how stablecoins are used to make international payments faster and less expensive while optimizing FX and payment routes.",
+    link: "https://www.agefi.fr/news/tech-finance/solide-finance-met-les-stablecoins-au-service-des-paiements-transfrontaliers"
+  },
+  {
+    logo: planetFintechLogo,
+    source: "Planet Fintech",
+    date: "17 October 2025",
+    title:
+      "Franco-Swiss fintech Solide Finance obtains accreditation and ISO 27001 certification to modernize cross-border payments",
+    summary:
+      "Coverage of SolideFinance’s ISO 27001 certification and Swiss accreditation milestone following its €1 million pre-seed round, alongside the deployment of its blockchain- and stablecoin-based infrastructure for instant institutional cross-border payments.",
+    link: "https://www.planet-fintech.com/La-fintech-franco-suisse-Solide-Finance-obtient-son-accreditation-et-sa-certification-ISO-27001_a6622.html"
+  },
+  {
+    logo: jaimeLesStartupsLogo,
+    source: "J’aime les startups",
+    date: "16 October 2025",
+    title: "Solide Finance obtains ISO 27001 certification",
+    summary:
+      "Coverage of SolideFinance obtaining ISO 27001 certification and advancing its regulatory accreditation process as it deploys an institution-first infrastructure for blockchain- and stablecoin-based cross-border payments.",
+    link: "https://www.jaimelesstartups.fr/news/solide-finance-obtient-la-certification-iso-27001/"
+  },
+  {
+    logo: lesEchosLogo,
+    source: "Les Echos",
+    date: "13 February 2024",
+    title: "Solide Finance aims to streamline foreign-exchange transactions for SMEs",
+    summary:
+      "An early profile of SolideFinance’s plan to simplify access to foreign currencies for internationally active SMEs and startups using automated market-making and blockchain technology to make FX transactions faster, cheaper and more secure.",
+    link: "https://drive.google.com/file/d/1EkXMqE-d5Tb5QnDeXtNV5ciiqpnaWsoX/view"
   }
 ];
 
