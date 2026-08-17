@@ -1,104 +1,71 @@
 import { useEffect, useState } from "react";
-import cx from "classnames";
 
 import sflogo from "../../assets/v2/sflogo.svg";
-import NeArrow from "../../assets/v2/ne-arrow.svg?react";
+import { contactMailto } from "../../config/site";
+import { navLinks } from "../../content/siteContent";
 
 import "./HeaderComponent.scss";
 
 export default function HeaderComponent() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    function isScrolling() {
-      window.requestAnimationFrame(() => {
-        setHasScrolled(Boolean(document.querySelector("html")!.scrollTop > 0));
-      });
-    }
-
-    window.addEventListener("scroll", isScrolling);
-
-    return window.removeEventListener.bind(window, "scroll", isScrolling);
+    const handleScroll = () => setHasScrolled(window.scrollY > 0);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const links = navLinks.map((link) => (
+    <li key={link.label}>
+      <a
+        href={link.href}
+        target={link.external ? "_blank" : undefined}
+        rel={link.external ? "noopener noreferrer" : undefined}
+        onClick={() => setMenuOpen(false)}
+      >
+        {link.label}
+        {link.external && <span className="sr-only"> (opens in a new tab)</span>}
+      </a>
+    </li>
+  ));
+
   return (
-    <>
-      <header className={cx("header-component desktop", { "is-scrolled": hasScrolled })}>
-        <h1>
-          <a href="/#top">
-            <img src={sflogo} alt="logo" />
-          </a>
-        </h1>
-        <nav>
-          <ul>
-            <li>
-              <a href="/#mission">Mission</a>
-            </li>
-            <li>
-              <a href="/#services">Services</a>
-            </li>
-            <li>
-              <a href="/#features">Features</a>
-            </li>
-            <li>
-              <a href="https://api.solide.fi/docs" target="_blank">
-                Developers
-              </a>
-            </li>
-            <li>
-              <a href="mailto:hello@solide.fi">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="actions">
-          <a href="mailto:hello@solide.fi" className="button-like">
-            Contact us{" "}
-            <span>
-              <NeArrow />
-            </span>
+    <header className={`site-header${hasScrolled ? " is-scrolled" : ""}`}>
+      <div className="site-header__inner">
+        <div className="brand">
+          <a href="/#top" aria-label="SolideFinance home">
+            <img src={sflogo} alt="SolideFinance" />
           </a>
         </div>
-      </header>
-      <header className={cx("header-component mobile", { "is-scrolled": hasScrolled })}>
-        <details name="menu">
-          <summary>
-            <h1>
-              <a href="/#top">
-                <img src={sflogo} alt="logo" />
-              </a>
-            </h1>
-            <span className="expanded-indicator">&nbsp;</span>
-          </summary>
-          <nav>
-            <ul>
-              <li>
-                <a href="/#mission">Mission</a>
-              </li>
-              <li>
-                <a href="/#services">Services</a>
-              </li>
-              <li>
-                <a href="/#features">Features</a>
-              </li>
-              <li>
-                <a href="https://solidefinance.gitbook.io/solidefinance-api" target="_blank">
-                  Developers
-                </a>
-              </li>
-              <li>
-                <hr className="demo-line" />
-                <a href="mailto:hello@solide.fi" className="button-like">
-                  Contact us{" "}
-                  <span>
-                    <NeArrow />
-                  </span>
-                </a>
-                <hr className="demo-line" />
-              </li>
-            </ul>
-          </nav>
-        </details>
-      </header>
-    </>
+
+        <nav className="desktop-navigation" aria-label="Primary navigation">
+          <ul>{links}</ul>
+        </nav>
+
+        <a className="button-like header-cta" href={contactMailto()}>
+          Contact our team <span aria-hidden="true">→</span>
+        </a>
+
+        <button
+          className="menu-button"
+          type="button"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+        </button>
+      </div>
+
+      <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation" hidden={!menuOpen}>
+        <ul>{links}</ul>
+        <a className="button-like" href={contactMailto()} onClick={() => setMenuOpen(false)}>
+          Contact our team <span aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </header>
   );
 }

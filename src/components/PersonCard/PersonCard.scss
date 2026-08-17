@@ -1,0 +1,65 @@
+@import "../../utils/variables.scss";
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 2.5rem;
+  border-radius: $radius;
+
+  h3 {
+    margin: 0 0 0.4rem;
+    font-size: 2rem;
+  }
+}
+
+.person-card__head {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.person-card__photo {
+  width: 6.4rem;
+  height: 6.4rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person-card__photo--initials {
+  display: grid;
+  place-items: center;
+  background: $teal;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.person-card__role {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.person-card__bio {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.person-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.8rem;
+  margin-top: auto;
+  color: $blue;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

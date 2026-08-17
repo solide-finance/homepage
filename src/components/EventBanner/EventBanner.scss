@@ -1,0 +1,34 @@
+@import "../../utils/variables.scss";
+
+.event-banner {
+  display: flex;
+  min-height: $event-banner-height;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 3rem;
+  background: $blue-dark;
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: #9ee2df;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .event-banner {
+    min-height: 0;
+    padding: 0.9rem 2rem;
+    font-size: 1.45rem;
+  }
+}
