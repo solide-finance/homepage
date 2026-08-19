@@ -35,10 +35,10 @@ export const navLinks: NavLink[] = [
 ];
 
 export const offices = [
-  { city: "Mulhouse", address: "KMØ, 30 rue François Spoerry, 68100 Mulhouse, France" },
-  { city: "Paris", address: "62 rue Jean-Jacques Rousseau, 75001 Paris, France" },
   { city: "Geneva", address: "c/o EUREX GE SA, Rue de Genève 18, 1225 Chêne-Bourg, Switzerland" },
-  { city: "Zurich", address: "Opening Q4 2026" }
+  { city: "Zurich", address: "Opening Q4 2026" },
+  { city: "Paris", address: "62 rue Jean-Jacques Rousseau, 75001 Paris, France" },
+  { city: "Mulhouse", address: "KMØ, 30 rue François Spoerry, 68100 Mulhouse, France" }
 ];
 
 export const homepageProofs = [
