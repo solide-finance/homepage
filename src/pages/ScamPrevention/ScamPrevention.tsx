@@ -161,9 +161,8 @@ export default function ScamPreventionPage() {
         legitimate?
       </h2>
       <p>
-        <strong>Check the source:</strong> Legitimate communications from SolideFinance SA will only come from our
-        official email address: <strong>{CONTACT_EMAIL}</strong>, or from our website <strong>{siteDomain}</strong> and
-        our Trust Center <strong>{trustDomain}</strong>. We urge you to exercise caution and verify a sender’s identity
+        <strong>Check the source:</strong> Legitimate communications from SolideFinance SA will only come from an
+        official email address <strong>@solide.fi</strong>. We urge you to exercise caution and verify a sender’s identity
         before responding to any communication claiming to be from us.
       </p>
 
