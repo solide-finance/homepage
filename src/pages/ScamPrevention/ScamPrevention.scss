@@ -1,0 +1,21 @@
+@import "../../utils/variables.scss";
+
+.scam-page {
+  h3 {
+    font-size: 2rem;
+  }
+
+  ul {
+    margin-bottom: 2.5rem;
+    padding-left: 2.4rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+    line-height: 1.65;
+  }
+}
+
+.scam-page__list li::marker {
+  color: $teal;
+}
