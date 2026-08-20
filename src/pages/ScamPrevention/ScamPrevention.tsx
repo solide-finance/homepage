@@ -1,10 +1,7 @@
 import Seo from "../../components/Seo/Seo";
-import { CONTACT_EMAIL, FRAUD_EMAIL, SITE_URL, TRUST_URL, mailto } from "../../config/site";
+import { FRAUD_EMAIL, mailto } from "../../config/site";
 
 import "./ScamPrevention.scss";
-
-const siteDomain = SITE_URL.replace(/^https?:\/\//, "");
-const trustDomain = TRUST_URL.replace(/^https?:\/\//, "");
 
 const neverAsk = [
   "Disclose your password or one-time passcodes.",
@@ -161,10 +158,9 @@ export default function ScamPreventionPage() {
         legitimate?
       </h2>
       <p>
-        <strong>Check the source:</strong> Legitimate communications from SolideFinance SA will only come from our
-        official email address: <strong>{CONTACT_EMAIL}</strong>, or from our website <strong>{siteDomain}</strong> and
-        our Trust Center <strong>{trustDomain}</strong>. We urge you to exercise caution and verify a sender’s identity
-        before responding to any communication claiming to be from us.
+        <strong>Check the source:</strong> Legitimate communications from SolideFinance SA will only come from an
+        official email address <strong>@solide.fi</strong>. We urge you to exercise caution and verify a sender’s
+        identity before responding to any communication claiming to be from us.
       </p>
 
       <h3>We will never ask you to:</h3>
