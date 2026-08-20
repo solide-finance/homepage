@@ -43,6 +43,12 @@ const routes = [
     description: "How SolideFinance collects, uses and protects personal information."
   },
   {
+    path: "/scam-prevention",
+    title: "Scam prevention — SolideFinance",
+    description:
+      "How SolideFinance SA works to prevent fraud and scams, how to recognise a scam, and how to report suspected fraud that mentions SolideFinance."
+  },
+  {
     path: "/404",
     output: "404.html",
     title: "Page not found — SolideFinance",

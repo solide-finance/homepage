@@ -55,6 +55,7 @@ export default function FooterComponent() {
           <nav aria-label="Footer navigation">
             <a href="/news">News</a>
             <a href="/pressbook.pdf">Pressbook</a>
+            <a href="/scam-prevention">Scam prevention</a>
             <a href="/privacy-policy">Privacy policy</a>
             <a href="/legal-notice">Legal notice</a>
           </nav>

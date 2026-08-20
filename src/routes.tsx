@@ -5,6 +5,7 @@ import NewsPage from "./pages/News/NewsPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import PortalPage from "./pages/Portal/PortalPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicy";
+import ScamPreventionPage from "./pages/ScamPrevention/ScamPrevention";
 
 const pages = {
   "/": <PortalPage />,
@@ -12,7 +13,8 @@ const pages = {
   "/company": <CompanyPage />,
   "/news": <NewsPage />,
   "/legal-notice": <LegalNoticePage />,
-  "/privacy-policy": <PrivacyPolicyPage />
+  "/privacy-policy": <PrivacyPolicyPage />,
+  "/scam-prevention": <ScamPreventionPage />
 } as const;
 
 export function resolvePage(pathname: string) {

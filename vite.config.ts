@@ -16,7 +16,8 @@ export default defineConfig({
           "/company",
           "/news",
           "/legal-notice",
-          "/privacy-policy"
+          "/privacy-policy",
+          "/scam-prevention"
         ]);
 
         server.middlewares.use((request, response, next) => {
