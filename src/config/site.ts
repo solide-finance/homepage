@@ -6,7 +6,7 @@ export const SOFIT_URL = "https://so-fit.ch/recherche/";
 export const DEVELOPER_DOCS_URL = "https://api.solide.fi/docs";
 
 export const BOOKING_URL =
-  import.meta.env.VITE_BOOKING_URL?.trim() ?? "https://calendar.google.com/calendar/appointments/schedules/PLACEHOLDER";
+  import.meta.env.VITE_BOOKING_URL?.trim() ?? "https://calendar.app.google/qCFPz6nPTP1n4BD47";
 
 export function mailto(address: string, subject?: string) {
   const href = `mailto:${address}`;
@@ -21,5 +21,5 @@ export const eventConfig = {
   enabled: true,
   name: "Sibos, Miami",
   dates: "28 September – 1 October",
-  href: contactMailto("Let's meet at Sibos")
+  href: BOOKING_URL
 } as const;

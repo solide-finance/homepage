@@ -7,9 +7,9 @@ export default function EventBanner() {
 
   return (
     <aside className="event-banner" aria-label="Upcoming event">
-      <a href={eventConfig.href}>
+      <a href={eventConfig.href} target="_blank" rel="noopener noreferrer">
         Meet SolideFinance at {eventConfig.name} · {eventConfig.dates} <span aria-hidden="true">→</span>{" "}
-        <strong>Contact our team</strong>
+        <strong>Book a meeting</strong>
       </a>
     </aside>
   );
