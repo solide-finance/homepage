@@ -5,8 +5,7 @@ export const TRUST_URL = "https://trust.solide.fi";
 export const SOFIT_URL = "https://so-fit.ch/recherche/";
 export const DEVELOPER_DOCS_URL = "https://api.solide.fi/docs";
 
-export const BOOKING_URL =
-  import.meta.env.VITE_BOOKING_URL?.trim() ?? "https://calendar.app.google/qCFPz6nPTP1n4BD47";
+export const BOOKING_URL = import.meta.env.VITE_BOOKING_URL?.trim() ?? "https://calendar.app.google/qCFPz6nPTP1n4BD47";
 
 export function mailto(address: string, subject?: string) {
   const href = `mailto:${address}`;
