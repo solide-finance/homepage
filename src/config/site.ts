@@ -18,7 +18,7 @@ export function contactMailto(subject?: string) {
 
 export const eventConfig = {
   enabled: true,
-  name: "Sibos, Miami",
-  dates: "28 September – 1 October",
+  name: "Singapore FinTech Festival",
+  dates: "18–20 November",
   href: BOOKING_URL
 } as const;
